@@ -17,8 +17,9 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			//print_r($event);
-			$userId = $event['source']['userId'];
-			$text = $event['message']['text'];
+			//$userId = $event['source']['userId'];
+			//$text = $event['message']['text'];
+			$text = $event['source']['userId'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
@@ -26,8 +27,8 @@ if (!is_null($events['events'])) {
 			$messages = [
 				'type' => 'text',
 				//'text' => "wowwwww",
-				'text' => '$userId'
-				//'text' => $text
+				//'text' => $userId
+				'text' => $text
 			];
 
 			// Make a POST Request to Messaging API to reply to sender

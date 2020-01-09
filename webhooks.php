@@ -37,7 +37,7 @@ if (!is_null($events['events'])) {
 				//'messages' => "wowwwww",
 				'messages' => [$messages],
 			];
-			//print_r( $data );
+			print_r( $data );
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 

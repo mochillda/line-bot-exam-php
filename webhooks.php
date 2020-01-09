@@ -14,7 +14,7 @@ if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
-		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+		if ($event['type'] == 'message' && $event['message']['type'] == 'text' && $event['message']['text'] != 'lo') {
 			// Get text sent
 			//print_r($event);
 			$userId = $event['source']['userId'];
@@ -52,15 +52,15 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 
 			echo $result . "\r\n";
-		}if ($event['type'] == 'message' && $event['message']['type'] == 'location') {
+		}if ($event['type'] == 'message' && $event['message']['type'] == 'location' && $event['message']['text'] == 'lo' ) {
 			$userId = $event['source']['userId'];
-			$text = $event['message']['text'];
+			$text = $event['message']['latitude'];
 			$replyToken = $event['replyToken'];
 			print_r($event);
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $userId
+				'text' => $text
 			];
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [

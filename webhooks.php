@@ -52,7 +52,7 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 
 			echo $result . "\r\n";
-		}if ($event['type'] == 'message' && $event['message']['type'] == 'location' && $event['message']['text'] == 'lo' ) {
+		}if ($event['type'] == 'message' && $event['message']['type'] == 'text' && $event['message']['text'] == 'lo' ) {
 			$userId = $event['source']['userId'];
 			$text = $event['message']['latitude'];
 			$replyToken = $event['replyToken'];

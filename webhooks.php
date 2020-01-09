@@ -26,8 +26,8 @@ if (!is_null($events['events'])) {
 			$messages = [
 				'type' => 'text',
 				//'text' => "wowwwww",
-				'text' => '$userId',
-				'text' => $text
+				'text' => '$userId'
+				//'text' => $text
 			];
 
 			// Make a POST Request to Messaging API to reply to sender

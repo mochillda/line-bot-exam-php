@@ -26,7 +26,7 @@ if (!is_null($events['events'])) {
 			$messages = [
 				'type' => 'text',
 				//'text' => "wowwwww",
-				'userId' => '$userId',
+				'text' => '$userId',
 				'text' => $text
 			];
 

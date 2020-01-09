@@ -54,7 +54,7 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 		}if ($event['type'] == 'message' && $event['message']['type'] == 'text' && $event['message']['text'] == 'lo' ) {
 			$userId = $event['source']['userId'];
-			$text = $event['message']['latitude'];
+			$text = '35.65910807942215,139.70372892916203';
 			$replyToken = $event['replyToken'];
 			print_r($event);
 			// Build message to reply back

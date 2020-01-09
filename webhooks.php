@@ -16,8 +16,9 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
-			print_r($event);
-			$text = $event['source']['userId'];
+			//print_r($event);
+			$userId = $event['source']['userId'];
+			$text = $event['message']['text'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
@@ -25,6 +26,7 @@ if (!is_null($events['events'])) {
 			$messages = [
 				'type' => 'text',
 				//'text' => "wowwwww",
+				'userId' => '$userId',
 				'text' => $text
 			];
 
@@ -35,7 +37,7 @@ if (!is_null($events['events'])) {
 				//'messages' => "wowwwww",
 				'messages' => [$messages],
 			];
-			print_r( $data );
+			//print_r( $data );
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 

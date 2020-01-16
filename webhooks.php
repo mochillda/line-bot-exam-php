@@ -14,7 +14,7 @@ if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
-		if ($event['type'] == 'message' && $event['message'][0]['type'] == 'text' && $event['message'][0]['text'] == 'id') {
+		if ($event['type'] == 'message' && $event['message']['type'] == 'text' && $event['message']['text'] == 'id') {
 			// Get text sent/
 			//print_r($event);
 			$userId = $event['source']['userId'];
@@ -53,7 +53,7 @@ if (!is_null($events['events'])) {
 
 			echo $result . "\r\n";
 		}
-		if ($event['type'] == 'message' && $event['message'][0]['type'] == 'text' && $event['message'][0]['text'] == 'lo' ) {
+		if ($event['type'] == 'message' && $event['message']['type'] == 'text' && $event['message']['text'] == 'lo' ) {
 			$userId = $event['source']['userId'];
 			//$text = '35.65910807942215,139.70372892916203';
 			$replyToken = $event['replyToken'];

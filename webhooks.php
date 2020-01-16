@@ -55,8 +55,9 @@ if (!is_null($events['events'])) {
 		}
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text' && $event['message']['text'] == 'lo' ) {
 			$userId = $event['source']['userId'];
-			$text = '35.65910807942215,139.70372892916203';
+			//$text = '35.65910807942215,139.70372892916203';
 			$replyToken = $event['replyToken'];
+			$text = $replyToken;
 			print_r($event);
 			// Build message to reply back
 			$messages = [

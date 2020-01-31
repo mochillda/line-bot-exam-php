@@ -1,1 +1,6 @@
-411111111111
+<?php
+    public function index(){
+        echo 1;
+    }
+
+?>

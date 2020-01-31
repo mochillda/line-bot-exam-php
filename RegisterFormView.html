@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title><?php echo $this->lang->line("แบบฟอร์มลงทะเบียน");?></title>
+  <title>("แบบฟอร์มลงทะเบียน")</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
 <body>
    <div class="container">
       <div style="padding: 25px; text-align: center;">
-        <h2><?php echo $this->lang->line("แบบฟอร์มลงทะเบียน");?></h2>
+        <h2>("แบบฟอร์มลงทะเบียน");?></h2>
       </div>
       <form id="registerLine" class="form-horizontal" name="registerLine"  method="post" > <!--action="<?php echo site_url($URL."/saveRegister") ;?>"-->
         <div class="box-body" style="padding: 25px;">
@@ -30,7 +30,7 @@
           </div>
         </div> -->
         <div style="text-align: center;">
-          <button type="button" class="btn btn-success"><?php echo $this->lang->line("ลงทะเบียน");?></button>
+          <button type="button" class="btn btn-success">("ลงทะเบียน")</button>
         </div>
        </div>
       </form>
@@ -38,7 +38,6 @@
 </body>
 </html>
 
-<?php // $this->load->view('script'); ?>
 <script type="text/javascript">
 
   function checkEmail(str){

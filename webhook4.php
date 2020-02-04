@@ -39,7 +39,7 @@ function processMessage($update) {
     }else{
         sendMessage(array(
             "source" => $update["responseId"],
-            "fulfillmentText"=> "Error",
+            "fulfillmentText"=> $update,
             "payload" => array(
                 "items"=>[
                     array(

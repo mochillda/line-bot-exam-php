@@ -70,7 +70,7 @@ if (isset($update["queryResult"]["action"])) {
 }else{
      sendMessage(array(
             "source" => $update["responseId"],
-            "fulfillmentText"=>$update,
+            "fulfillmentText"=>"***Hello from webhook not set",
             "payload" => array(
                 "items"=>[
                     array(

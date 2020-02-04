@@ -70,7 +70,7 @@ $update = json_decode($update_response, true);
 // }else{
      sendMessage(array(
             "source" => $update["responseId"],
-            "fulfillmentText"=>$update["queryResult"],
+            "fulfillmentText"=>"Hiiiiiiiiiiii",
             "payload" => array(
                 "items"=>[
                     array(

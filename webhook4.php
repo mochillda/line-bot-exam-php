@@ -70,7 +70,7 @@ if (isset($update["queryResult"]["action"])) {
 }else{
      sendMessage(array(
             "source" => $update["responseId"],
-            "fulfillmentText"=>"Hiiiiiiiiiiii",
+            "fulfillmentText"=> $update["session"],
             "payload" => array(
                 "items"=>[
                     array(

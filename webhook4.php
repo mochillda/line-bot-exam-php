@@ -1,9 +1,9 @@
 <?php
 function processMessage($update) {
-    if($update["queryResult"]["queryText"] == "sayHello"){
+    if($update["queryResult"]["queryText"] == "ลงทะเบียน"){
         sendMessage(array(
             "source" => $update["responseId"],
-            "fulfillmentText"=>"Hello from webhook",
+            "fulfillmentText"=>"ลงทะเบียนสำเร็จ",
             "payload" => array(
                 "items"=>[
                     array(

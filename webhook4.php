@@ -1,6 +1,6 @@
 <?php
 function processMessage($update) {
-    if($update["queryResult"]["action"] == "sayHello"){
+    if($update["queryResult"]["queryText"] == "sayHello"){
         sendMessage(array(
             "source" => $update["responseId"],
             "fulfillmentText"=>"Hello from webhook",
@@ -16,7 +16,7 @@ function processMessage($update) {
                 ),
            
         ));
-    }else if($update["queryResult"]["action"] == "convert"){
+    }else if($update["queryResult"]["queryText"] == "convert"){
         if($update["queryResult"]["parameters"]["outputcurrency"] == "USD"){
            $amount =  intval($update["queryResult"]["parameters"]["amountToConverte"]["amount"]);
            $convertresult = $amount * 360;
@@ -62,10 +62,10 @@ function sendMessage($parameters) {
  
 $update_response = file_get_contents("php://input");
 $update = json_decode($update_response, true);
-if (isset($update["queryResult"]["action"])) {
+if (isset($update["queryResult"]["queryText"])) {
     processMessage($update);
     $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
-   fwrite($myfile, $update["queryResult"]["action"]);
+   fwrite($myfile, $update["queryResult"]["queryText"]);
     fclose($myfile);
 }else{
      sendMessage(array(

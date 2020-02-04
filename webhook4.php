@@ -3,7 +3,7 @@ function processMessage($update) {
     if($update["queryResult"]["action"] == "sayHello"){
         sendMessage(array(
             "source" => $update["responseId"],
-            "fulfillmentText"=>$update["queryResult"]["action"],
+            "fulfillmentText"=>"Hello from webhook",
             "payload" => array(
                 "items"=>[
                     array(
@@ -70,7 +70,7 @@ if (isset($update["queryResult"]["action"])) {
 }else{
      sendMessage(array(
             "source" => $update["responseId"],
-            "fulfillmentText"=>"Hello from webhook",
+            "fulfillmentText"=>"Hello from webhook5555---",
             "payload" => array(
                 "items"=>[
                     array(

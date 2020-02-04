@@ -3,7 +3,7 @@ function processMessage($update) {
     if($update["queryResult"]["queryText"] == "ลงทะเบียน"){
         sendMessage(array(
             "source" => $update["responseId"],
-            "fulfillmentText"=>"ลงทะเบียนสำเร็จ",
+            "fulfillmentText"=>$update['originalDetectIntentRequest']['payload']['data']['source']['userId'],
             "payload" => array(
                 "items"=>[
                     array(

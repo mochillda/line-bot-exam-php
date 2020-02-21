@@ -63,7 +63,7 @@ function sendMessage($parameters) {
  
 $update_response = file_get_contents("php://input");
 $update = json_decode($update_response, true);
-print_r(json_encode($update));
+// print_r(json_encode($update));
 if (isset($update["queryResult"]["queryText"])) {
     processMessage($update);
     $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");

@@ -3,8 +3,28 @@ function processMessage($update) {
     if($update["queryResult"]["queryText"] == "yes"){
         sendMessage(array(
             "source" => $update["responseId"],
-            "fulfillmentText"=>$update['queryResult']['parameters']['codeId'],
+            //"fulfillmentText"=>$update['queryResult']['parameters']['codeId'],
            // "fulfillmentText"=>$update['originalDetectIntentRequest']['payload']['data']['source']['userId'],
+            "fulfillmentText"=>{
+                  "type": "template",
+                  "altText": "this is a confirm template",
+                  "template": {
+                    "type": "confirm",
+                    "actions": [
+                      {
+                        "type": "message",
+                        "label": "ใช่",
+                        "text": "Yes"
+                      },
+                      {
+                        "type": "message",
+                        "label": "ไม่ใช่",
+                        "text": "No"
+                      }
+                    ],
+                    "text": "คุณคือ : พัชราภา ไชยเชื้อ ใช่หรือไม่ ?"
+                  }
+                },
             "payload" => array(
                 "items"=>[
                     array(

@@ -83,6 +83,11 @@ function sendMessage($parameters) {
  
 $update_response = file_get_contents("php://input");
 $update = json_decode($update_response, true);
+//
+$arrayHeader = array();
+$arrayHeader[] = "Content-Type: application/json";
+$arrayHeader[] = "Authorization: Bearer {$accessToken}";
+
 // print_r(json_encode($update));
 if (isset($update["queryResult"]["queryText"])) {
     processMessage($update);

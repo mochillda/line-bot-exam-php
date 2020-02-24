@@ -5,7 +5,6 @@ function processMessage($update) {
             "source" => $update["responseId"],
             "fulfillmentText"=>$update['queryResult']['parameters']['codeId'],
            // "fulfillmentText"=>$update['originalDetectIntentRequest']['payload']['data']['source']['userId'],
-//             "fulfillmentText"=>"ssssssss",
             "payload" => array(
                 "items"=>[
                     array(

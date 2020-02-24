@@ -89,3 +89,4 @@ if (isset($update["queryResult"]["queryText"])) {
 
 
 ?>
+//------------

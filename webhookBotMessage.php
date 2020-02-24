@@ -3,9 +3,9 @@ function processMessage($update) {
     if($update["queryResult"]["queryText"] == "yes"){
         sendMessage(array(
             "source" => $update["responseId"],
-            //"fulfillmentText"=>$update['queryResult']['parameters']['codeId'],
+            "fulfillmentText"=>$update['queryResult']['parameters']['codeId'],
            // "fulfillmentText"=>$update['originalDetectIntentRequest']['payload']['data']['source']['userId'],
-            "fulfillmentText"=>"ssssssss",
+//             "fulfillmentText"=>"ssssssss",
             "payload" => array(
                 "items"=>[
                     array(

@@ -3,28 +3,8 @@ function processMessage($update) {
     if($update["queryResult"]["queryText"] == "ใช่"){
         sendMessage(array(
             "source" => $update["responseId"],
-//             "fulfillmentText"=>$update['queryResult']['parameters']['codeId'],
+            "fulfillmentText"=>$update['queryResult']['parameters']['codeId'],
            // "fulfillmentText"=>$update['originalDetectIntentRequest']['payload']['data']['source']['userId'],
-            "fulfillmentText"=>{
-              "type": "template",
-              "altText": "this is a confirm template",
-              "template": {
-                "type": "confirm",
-                "actions": [
-                  {
-                    "type": "message",
-                    "label": "ใช่",
-                    "text": "Yes"
-                  },
-                  {
-                    "type": "message",
-                    "label": "ไม่ใช่",
-                    "text": "No"
-                  }
-                ],
-                "text": "คุณคือ : พัชราภา ไชยเชื้อ ใช่หรือไม่ ?"
-              }
-            },
             "payload" => array(
                 "items"=>[
                     array(
@@ -83,11 +63,6 @@ function sendMessage($parameters) {
  
 $update_response = file_get_contents("php://input");
 $update = json_decode($update_response, true);
-//
-$arrayHeader = array();
-$arrayHeader[] = "Content-Type: application/json";
-$arrayHeader[] = "Authorization: Bearer {$accessToken}";
-
 // print_r(json_encode($update));
 if (isset($update["queryResult"]["queryText"])) {
     processMessage($update);
@@ -111,5 +86,6 @@ if (isset($update["queryResult"]["queryText"])) {
            
         ));
 }
-?>
 
+
+?>

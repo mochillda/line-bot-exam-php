@@ -1,6 +1,6 @@
 <?php
 function processMessage($update) {
-    if($update["queryResult"]["queryText"] == "yes"){
+    if($update["queryResult"]["queryText"] == "ใช่"){
         sendMessage(array(
             "source" => $update["responseId"],
             "fulfillmentText"=>$update['queryResult']['parameters']['codeId'],

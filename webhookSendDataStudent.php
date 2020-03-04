@@ -5,16 +5,36 @@ function processMessage($update) {
             "source" => $update["responseId"],
             "fulfillmentText"=>$update['queryResult']['parameters']['codeId'],
            // "fulfillmentText"=>$update['originalDetectIntentRequest']['payload']['data']['source']['userId'],
-            "payload" => array(
-                "items"=>[
-                    array(
-                        "simpleResponse"=>
-                    array(
-                        "textToSpeech"=>"response from host"
-                         )
-                    )
-                ],
-                ),
+//             "payload" => array(
+//                 "items"=>[
+//                     array(
+//                         "simpleResponse"=>
+//                     array(
+//                         "textToSpeech"=>"response from host"
+//                          )
+//                     )
+//                 ],
+//                 ),
+             "payload" =>{
+  "type": "template",
+  "altText": "this is a confirm template",
+  "template": {
+    "type": "confirm",
+    "actions": [
+      {
+        "type": "message",
+        "label": "Yes",
+        "text": "Yes"
+      },
+      {
+        "type": "message",
+        "label": "No",
+        "text": "No"
+      }
+    ],
+    "text": "Continue?"
+  }
+}
            
         ));
     }else if($update["queryResult"]["queryText"] == "convert"){

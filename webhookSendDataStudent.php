@@ -3,8 +3,7 @@ function processMessage($update) {
     if($update["queryResult"]["queryText"] == "ใช่"){
         sendMessage(array(
             "source" => $update["responseId"],
-            "fulfillmentText"=>$update['queryResult']['parameters']['codeId'],
-            "payload" => {
+            "fulfillmentText"=> {
                           "type": "template",
                           "altText": "this is a confirm template",
                           "template": {
@@ -23,7 +22,19 @@ function processMessage($update) {
                             ],
                             "text": "Continue?"
                           }
-                        }
+                        },
+            "payload" => array(
+                "items"=>[
+                    array(
+                        "simpleResponse"=>
+                    array(
+                        "textToSpeech"=>"The conversion result is".$convertresult
+                         )
+                    )
+                ],
+                ),
+           
+        ));
     }else if($update["queryResult"]["queryText"] == "convert"){
         if($update["queryResult"]["parameters"]["outputcurrency"] == "USD"){
            $amount =  intval($update["queryResult"]["parameters"]["amountToConverte"]["amount"]);

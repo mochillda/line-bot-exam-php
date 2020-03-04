@@ -65,7 +65,8 @@ if ($response->isSucceeded()) {
 }
  
 // Failed
-echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
+$response = $bot->replyMessage($replyToken,'พังงงงงงง');
+// echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
 
 
 ?>

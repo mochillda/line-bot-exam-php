@@ -42,7 +42,7 @@ foreach ($events as $event) {
 	if (($event instanceof \LINE\LINEBot\Event\MessageEvent\TextMessage)) {
 		$messageText=strtolower(trim($event->getText()));
 		switch ($messageText) {
-		case "text" : 
+		case "ใช่" : 
 			$outputText = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder("text message");
 			break;
 		case "location" :

@@ -1,10 +1,12 @@
 <?php
 
 // include composer autoload
-require_once 'vendor/autoload.php';
- 
+require "vendor/autoload.php";
 // การตั้งเกี่ยวกับ bot
-require_once 'bot_settings.php';
+require_once('bot_settings.php');
+ 
+
+// require_once '';
 
 function processMessage($update) {
     if($update["queryResult"]["queryText"] == "ใช่"){

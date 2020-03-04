@@ -8,7 +8,7 @@ if(!is_null($events)){
     $userMessage = $events['events'][0]['message']['text'];
     $userMessage = strtolower($userMessage);
     switch ($typeMessage){
-        case 'ใช่':
+        case "ใช่":
             switch ($userMessage) {
                 case "t":
                     $textReplyMessage = "Bot ตอบกลับคุณเป็นข้อความ";

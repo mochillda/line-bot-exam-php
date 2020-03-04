@@ -3,26 +3,7 @@ function processMessage($update) {
     if($update["queryResult"]["queryText"] == "ใช่"){
         sendMessage(array(
             "source" => $update["responseId"],
-            "fulfillmentText"=> {
-                          "type": "template",
-                          "altText": "this is a confirm template",
-                          "template": {
-                            "type": "confirm",
-                            "actions": [
-                              {
-                                "type": "message",
-                                "label": "Yes",
-                                "text": "Yes"
-                              },
-                              {
-                                "type": "message",
-                                "label": "No",
-                                "text": "No"
-                              }
-                            ],
-                            "text": "Continue?"
-                          }
-                        },
+            "fulfillmentText"=>"kkkkkkkk",
             "payload" => array(
                 "items"=>[
                     array(

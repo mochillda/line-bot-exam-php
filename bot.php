@@ -1,7 +1,7 @@
 <?php
 
 // include composer autoload
-require_once '../vendor/autoload.php';
+require_once 'vendor/autoload.php';
  
 // การตั้งเกี่ยวกับ bot
 require_once 'bot_settings.php';

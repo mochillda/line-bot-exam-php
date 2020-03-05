@@ -51,7 +51,7 @@ function processMessage($update) {
         sendMessage(array(
             "source" => $update["responseId"],
 //          "fulfillmentText"=> $replyData,
-            "fulfillmentText": 'ข้อความที่จะตอบกลับแบบปกติ',
+            "fulfillmentText"=> 'ข้อความที่จะตอบกลับแบบปกติ',
 //             "fulfillmentMessages": [
 //                   {
 //                     platform: 'line',

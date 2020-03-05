@@ -47,29 +47,11 @@ $bot = new LINEBot($httpClient, array('channelSecret' => 'c26ca6b94dd522e9c94403
 
 function processMessage($update) {
     if($update["queryResult"]["queryText"] == "ใช่"){
-        $replyData = new TemplateMessageBuilder('Confirm Template',
-                        new ConfirmTemplateBuilder(
-                                'Confirm template builder',
-                                array(
-                                    new MessageTemplateActionBuilder(
-                                        'Yes',
-                                        'Text Yes'
-                                    ),
-                                    new MessageTemplateActionBuilder(
-                                        'No',
-                                        'Text NO'
-                                    )
-                                )
-                        )
-                    );
-                  //  break; 
+       $textReplyMessage = " คุณไม่ได้พิมพ์ A และ B";
         
         sendMessage(array(
             "source" => $update["responseId"],
-//             "fulfillmentText"=>$update['queryResult'],
-//             "fulfillmentText"=>$update,
-            "fulfillmentText"=>$replyData,
-          //"fulfillmentText"=>$update['originalDetectIntentRequest']['payload']['data']['source']['userId'],
+            "fulfillmentText"=>$textReplyMessage,
             "payload" => array(
                 "items"=>[
                     array(

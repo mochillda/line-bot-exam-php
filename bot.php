@@ -52,14 +52,16 @@ function processMessage($update) {
             "source" => $update["responseId"],
 //          "fulfillmentText"=> $replyData,
             "fulfillmentMessages": [
-                  {
-                    "text": {
-                      "text": [
-                        "We could find few matching products based on your query"
-                      ]
-                    }
-                  }
-                ],
+              {
+                "platform": "line",
+                "type": 4,
+                "payload" : {
+                  "line":  {
+                    "type": "text",
+                    "text": "added"
+                  }}
+              }
+            ],
             
             "payload" => array(
                 "items"=>[

@@ -47,12 +47,20 @@ $bot = new LINEBot($httpClient, array('channelSecret' => 'c26ca6b94dd522e9c94403
 
 function processMessage($update) {
     if($update["queryResult"]["queryText"] == "ใช่"){
-        $textReplyMessage = "Bot ตอบกลับคุณเป็นข้อความ";
-        $replyData = new TextMessageBuilder($textReplyMessage);
         
         sendMessage(array(
             "source" => $update["responseId"],
-            "fulfillmentText"=> $replyData,
+//          "fulfillmentText"=> $replyData,
+            "fulfillmentMessages": [
+                  {
+                    "text": {
+                      "text": [
+                        "We could find few matching products based on your query"
+                      ]
+                    }
+                  }
+                ],
+            
             "payload" => array(
                 "items"=>[
                     array(

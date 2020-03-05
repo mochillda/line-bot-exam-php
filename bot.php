@@ -52,7 +52,7 @@ function processMessage($update) {
         
         sendMessage(array(
             "source" => $update["responseId"],
-            "fulfillmentText"=>'ทดสอบ',
+            "fulfillmentText"=> $replyData+'ทดสอบ',
             "payload" => array(
                 "items"=>[
                     array(

@@ -54,12 +54,12 @@ function processMessage($update) {
             "fulfillmentText"=> 'ข้อความที่จะตอบกลับแบบปกติ',
             "fulfillmentMessages"=> [
                   {
-                    platform: 'line',
-                    type: 4,
-                    payload: {
-                      line: {
-                        type: 'text',
-                        text: 'ข้อความที่จะตอบกลับใน LINE'
+                    "platform"=> 'line',
+                    "type"=> 4,
+                    "payload"=> {
+                    "line"=> {
+                    "type"=> 'text',
+                    "text"=> 'ข้อความที่จะตอบกลับใน LINE'
                       }
                     }
                   }

@@ -1,91 +1,85 @@
 <?php
-
-// include composer autoload
 require "vendor/autoload.php";
-// การตั้งเกี่ยวกับ bot
-// require_once('bot_settings.php');
-
-// ///////////// ส่วนของการเรียกใช้งาน class ผ่าน namespace
-// use LINE\LINEBot;
-// use LINE\LINEBot\HTTPClient;
-// use LINE\LINEBot\HTTPClient\CurlHTTPClient;
-// //use LINE\LINEBot\Event;
-// //use LINE\LINEBot\Event\BaseEvent;
-// //use LINE\LINEBot\Event\MessageEvent;
-// use LINE\LINEBot\MessageBuilder;
-// use LINE\LINEBot\MessageBuilder\TextMessageBuilder;
-// use LINE\LINEBot\MessageBuilder\StickerMessageBuilder;
-// use LINE\LINEBot\MessageBuilder\ImageMessageBuilder;
-// use LINE\LINEBot\MessageBuilder\LocationMessageBuilder;
-// use LINE\LINEBot\MessageBuilder\AudioMessageBuilder;
-// use LINE\LINEBot\MessageBuilder\VideoMessageBuilder;
-// use LINE\LINEBot\ImagemapActionBuilder;
-// use LINE\LINEBot\ImagemapActionBuilder\AreaBuilder;
-// use LINE\LINEBot\ImagemapActionBuilder\ImagemapMessageActionBuilder ;
-// use LINE\LINEBot\ImagemapActionBuilder\ImagemapUriActionBuilder;
-// use LINE\LINEBot\MessageBuilder\Imagemap\BaseSizeBuilder;
-// use LINE\LINEBot\MessageBuilder\ImagemapMessageBuilder;
-// use LINE\LINEBot\MessageBuilder\MultiMessageBuilder;
-// use LINE\LINEBot\TemplateActionBuilder;
-// use LINE\LINEBot\TemplateActionBuilder\DatetimePickerTemplateActionBuilder;
-// use LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder;
-// use LINE\LINEBot\TemplateActionBuilder\PostbackTemplateActionBuilder;
-// use LINE\LINEBot\TemplateActionBuilder\UriTemplateActionBuilder;
-// use LINE\LINEBot\MessageBuilder\TemplateBuilder;
-// use LINE\LINEBot\MessageBuilder\TemplateMessageBuilder;
-// use LINE\LINEBot\MessageBuilder\TemplateBuilder\ButtonTemplateBuilder;
-// use LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselTemplateBuilder;
-// use LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselColumnTemplateBuilder;
-// use LINE\LINEBot\MessageBuilder\TemplateBuilder\ConfirmTemplateBuilder;
-// use LINE\LINEBot\MessageBuilder\TemplateBuilder\ImageCarouselTemplateBuilder;
-// use LINE\LINEBot\MessageBuilder\TemplateBuilder\ImageCarouselColumnTemplateBuilder;
-
-// เชื่อมต่อกับ LINE Messaging API
-// $access_token = 'lMGsbFR4DBpd5t5u7AL31RqMxqM/tEe02YYOcf1TXOD1mprdXoPtkyRKbs+Q3APyFZVDLGZmxYXyZD7T1tvt0ztKmVRR73ngC3zduOM+r3qDohGFuNa5tV0aKp9M3GMFaPU3XEjPikIDPch8QLU0/QdB04t89/1O/w1cDnyilFU=';
-// $httpClient = new CurlHTTPClient($access_token);
-// $bot = new LINEBot($httpClient, array('channelSecret' => 'c26ca6b94dd522e9c9440326215124a5'));
 
 function processMessage($update) {
     if($update["queryResult"]["queryText"] == "ใช่"){
         
         sendMessage(array(
             "source" => $update["responseId"],
-//          "fulfillmentText"=> $replyData,
             "fulfillmentText"=> 'ข้อความที่จะตอบกลับแบบปกติ',
             "fulfillmentMessages"=> [
                   array(
                     "platform"=> 'line',
                     "type"=> 4,
                     "payload"=> array(
-//                        "line"=> array(
-//                          "type"=> "text",
-//                          "text"=> "Hello"
-//                         )
-//                       "line"=> array(
-//                         "type"=> "image",
-//                         "originalContentUrl"=> "https://1.bp.blogspot.com/-U90M8DyKu7Q/W9EtONMCf6I/AAAAAAAAW_4/7L_jB_Rg9oweu2HKhULNdu9WNefw9zf9wCLcBGAs/s1600/sao-full.jpg",
-//                         "previewImageUrl"=> "https://3.bp.blogspot.com/-POLCd-KKazc/W9EtNxsqwpI/AAAAAAAAW_0/c8P1A4Ik3tMsCXZwaI1B2n3eXZqG0ifzwCLcBGAs/s1600/sao-preview.jpg"
-//                       )
-                        "line"=> array(
-                            "type"=> "template",
-                            "altText"=> "this is a confirm template",
-                            "template"=> array(
-                              "type"=> "confirm",
-                              "text"=> "ต้องการที่จะลบข้อมูลหรือไม่?",
+                        
+                    "line"=> array(
+                        "type"=> "template",
+                        "altText"=> "this is a carousel template",
+                        "template"=> array(
+                          "type"=> "carousel",
+                          "imageAspectRatio"=> "rectangle",
+                          "imageSize"=> "cover",
+                          "columns"=> [
+                            array(
+                              "thumbnailImageUrl"=> "https://1.bp.blogspot.com/-U90M8DyKu7Q/W9EtONMCf6I/AAAAAAAAW_4/7L_jB_Rg9oweu2HKhULNdu9WNefw9zf9wCLcBGAs/s1600/sao-full.jpg",
+                              "imageBackgroundColor"=> "#FFFFFF",
+                              "title"=> "แผ่นเกม Sword Art Online",
+                              "text"=> "แผ่นเกม Sword Art Online",
+                              "defaultAction"=> array(
+                                "type"=> "uri",
+                                "label"=> "รายละเอียด",
+                                "uri"=> "https://www.google.com/"
+                              ),
                               "actions"=> [
                                 array(
-                                  "type"=> "message",
-                                  "label"=> "ใช่",
-                                  "text"=> "ใช่"
+                                  "type"=> "postback",
+                                  "label"=> "สั่งซื้อ",
+                                  "data"=> "action=buy&itemid=111"
                                 ),
                                 array(
-                                  "type"=> "message",
-                                  "label"=> "ไม่",
-                                  "text"=> "ไม่"
+                                  "type"=> "postback",
+                                  "label"=> "เพิ่มลงรถเข็น",
+                                  "data"=> "action=add&itemid=111"
+                                ),
+                                array(
+                                  "type"=> "uri",
+                                  "label"=> "รายละเอียด",
+                                  "uri"=> "https://www.google.com/"
+                                )
+                              ]
+                            ),
+                            array(
+                              "thumbnailImageUrl"=> "https://2.bp.blogspot.com/-xAUbzdD07Z8/W9F4070M0JI/AAAAAAAAXAE/67QhUZB4TI4Xyu3GT2-DO0yA5XJtlij-ACLcBGAs/s1600/sao-os.jpg",
+                              "imageBackgroundColor"=> "#FFFFFF",
+                              "title"=> "Sword Art Online Ordinal Scale",
+                              "text"=> "Sword Art Online Ordinal Scale",
+                              "defaultAction"=> array(
+                                "type"=> "uri",
+                                "label"=> "รายละเอียด",
+                                "uri"=> "https://www.google.com/"
+                              ),
+                              "actions"=> [
+                                array(
+                                  "type"=> "postback",
+                                  "label"=> "สั่งซื้อ",
+                                  "data"=> "action=buy&itemid=111"
+                                ),
+                                array(
+                                  "type"=> "postback",
+                                  "label"=> "เพิ่มลงรถเข็น",
+                                  "data"=> "action=add&itemid=111"
+                                ),
+                                array(
+                                  "type"=> "uri",
+                                  "label"=> "รายละเอียด",
+                                  "uri"=> "https://www.google.com/"
                                 )
                               ]
                             )
-                          )
+                          ]
+                        )
+                      )
                         
                     )
                   )
@@ -172,25 +166,4 @@ if (isset($update["queryResult"]["queryText"])) {
         ));
 }
 
-// // คำสั่งรอรับการส่งค่ามาของ LINE Messaging API
-// $content = file_get_contents('php://input');
- 
-// // แปลงข้อความรูปแบบ JSON  ให้อยู่ในโครงสร้างตัวแปร array
-// $events = json_decode($content, true);
-// if(!is_null($events)){
-//     // ถ้ามีค่า สร้างตัวแปรเก็บ replyToken ไว้ใช้งาน
-//     $replyToken = $events['events'][0]['replyToken'];
-// }
-// // ส่วนของคำสั่งจัดเตียมรูปแบบข้อความสำหรับส่ง
-// $textMessageBuilder = new TextMessageBuilder(json_encode($events));
- 
-// //l ส่วนของคำสั่งตอบกลับข้อความ
-// $response = $bot->replyMessage($replyToken,$textMessageBuilder);
-// if ($response->isSucceeded()) {
-//     echo 'Succeeded!';
-//     return;
-// }
- 
-// // Failed
-// echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
 ?>

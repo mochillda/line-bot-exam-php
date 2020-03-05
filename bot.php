@@ -22,8 +22,8 @@ function processMessage($update) {
                             "imageAspectRatio"=> "rectangle",
                             "imageSize"=> "cover",
                             "imageBackgroundColor"=> "#FFFFFF",
-                            "title"=> "แผ่นเกม Sword Art Online",
-                            "text"=> "กรุณาเลือก",
+                            "title"=> "คุณคือ ธิดารัตน์ ภู่ระหงษ์ ใช่หรือไม่?",
+                            "text"=> "กรุณายืนยัน",
                             "defaultAction"=> array(
                                 "type"=> "uri",
                                 "label"=> "View detail",
@@ -32,18 +32,13 @@ function processMessage($update) {
                             "actions"=> [
                                 array(
                                   "type"=> "postback",
-                                  "label"=> "สั่งซื้อ",
+                                  "label"=> "ใช่",
                                   "data"=> "action=buy&itemid=123"
                                 ),
                                 array(
                                   "type"=> "postback",
-                                  "label"=> "เพิ่มลงรถเข็น",
+                                  "label"=> "ไม่ใช่",
                                   "data"=> "action=add&itemid=123"
-                                ),
-                                array(
-                                  "type"=> "uri",
-                                  "label"=> "อ่านรายละเอียด",
-                                  "uri"=> "https://www.google.com"
                                 )
                             ]
                         )

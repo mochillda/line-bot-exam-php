@@ -51,18 +51,19 @@ function processMessage($update) {
         sendMessage(array(
             "source" => $update["responseId"],
 //          "fulfillmentText"=> $replyData,
+            "fulfillmentText": 'ข้อความที่จะตอบกลับแบบปกติ'
             "fulfillmentMessages": [
-              {
-                "platform": "line",
-                "type": 4,
-                "payload" : {
-                  "line":  {
-                    "type": "text",
-                    "text": "added"
-                  }}
-              }
-            ],
-            
+                  {
+                    platform: 'line',
+                    type: 4,
+                    payload: {
+                      line: {
+                        type: 'text',
+                        text: 'ข้อความที่จะตอบกลับใน LINE'
+                      }
+                    }
+                  }
+                ],
             "payload" => array(
                 "items"=>[
                     array(

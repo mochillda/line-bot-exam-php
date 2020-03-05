@@ -57,10 +57,15 @@ function processMessage($update) {
                     "platform"=> 'line',
                     "type"=> 4,
                     "payload"=> array(
-                       "line"=> array(
-                         "type"=> "text",
-                         "text"=> "Hello"
-                        )
+//                        "line"=> array(
+//                          "type"=> "text",
+//                          "text"=> "Hello"
+//                         )
+                         "line"=> array(
+                            "type"=> "flex",
+                            "altText"=> "ข้อความที่แสดง",
+                            "contents"=> ""
+                                  )
                     )
                   )
                 ],

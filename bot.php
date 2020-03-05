@@ -61,7 +61,7 @@ function processMessage($update) {
 //                          "type"=> "text",
 //                          "text"=> "Hello"
 //                         )
-                      "line": array(
+                      "line"=> array(
                         "type"=> "image",
                         "originalContentUrl"=> "https://1.bp.blogspot.com/-U90M8DyKu7Q/W9EtONMCf6I/AAAAAAAAW_4/7L_jB_Rg9oweu2HKhULNdu9WNefw9zf9wCLcBGAs/s1600/sao-full.jpg",
                         "previewImageUrl"=> "https://3.bp.blogspot.com/-POLCd-KKazc/W9EtNxsqwpI/AAAAAAAAW_0/c8P1A4Ik3tMsCXZwaI1B2n3eXZqG0ifzwCLcBGAs/s1600/sao-preview.jpg"

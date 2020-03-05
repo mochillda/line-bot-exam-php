@@ -47,11 +47,12 @@ $bot = new LINEBot($httpClient, array('channelSecret' => 'c26ca6b94dd522e9c94403
 
 function processMessage($update) {
     if($update["queryResult"]["queryText"] == "ใช่"){
-       $textReplyMessage = " คุณไม่ได้พิมพ์ A และ B";
+        $textReplyMessage = "Bot ตอบกลับคุณเป็นข้อความ";
+        $replyData = new TextMessageBuilder($textReplyMessage);
         
         sendMessage(array(
             "source" => $update["responseId"],
-            "fulfillmentText"=>$textReplyMessage,
+            "fulfillmentText"=>$replyData,
             "payload" => array(
                 "items"=>[
                     array(

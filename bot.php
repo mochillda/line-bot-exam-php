@@ -43,7 +43,7 @@ use LINE\LINEBot\MessageBuilder\TemplateBuilder\ImageCarouselColumnTemplateBuild
 // เชื่อมต่อกับ LINE Messaging API
 $access_token = 'lMGsbFR4DBpd5t5u7AL31RqMxqM/tEe02YYOcf1TXOD1mprdXoPtkyRKbs+Q3APyFZVDLGZmxYXyZD7T1tvt0ztKmVRR73ngC3zduOM+r3qDohGFuNa5tV0aKp9M3GMFaPU3XEjPikIDPch8QLU0/QdB04t89/1O/w1cDnyilFU=';
 $httpClient = new CurlHTTPClient($access_token);
-$bot = new LINEBot($httpClient, array('channelSecret' =>'c26ca6b94dd522e9c9440326215124a5'));
+$bot = new LINEBot($httpClient, array('channelSecret' => c26ca6b94dd522e9c9440326215124a5));
 
 // คำสั่งรอรับการส่งค่ามาของ LINE Messaging API
 $content = file_get_contents('php://input');
@@ -66,92 +66,4 @@ if ($response->isSucceeded()) {
  
 // Failed
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
-
-// function processMessage($update) {
-//     if($update["queryResult"]["queryText"] == "ใช่"){
-//         sendMessage(array(
-//             "source" => $update["responseId"],
-//             "fulfillmentText"=>$update['queryResult']['parameters']['codeId'],
-//            // "fulfillmentText"=>$update['originalDetectIntentRequest']['payload']['data']['source']['userId'],
-//             "payload" => array(
-//                 "items"=>[
-//                     array(
-//                         "simpleResponse"=>
-//                     array(
-//                         "textToSpeech"=>"response from host"
-//                          )
-//                     )
-//                 ],
-//                 ),
-           
-//         ));
-//     }else if($update["queryResult"]["queryText"] == "convert"){
-//         if($update["queryResult"]["parameters"]["outputcurrency"] == "USD"){
-//            $amount =  intval($update["queryResult"]["parameters"]["amountToConverte"]["amount"]);
-//            $convertresult = $amount * 360;
-//         }
-//          sendMessage(array(
-//             "source" => $update["responseId"],
-//             "fulfillmentText"=>"The conversion result is".$convertresult,
-//             "payload" => array(
-//                 "items"=>[
-//                     array(
-//                         "simpleResponse"=>
-//                     array(
-//                         "textToSpeech"=>"The conversion result is".$convertresult
-//                          )
-//                     )
-//                 ],
-//                 ),
-           
-//         ));
-//     }else{
-//         sendMessage(array(
-//             "source" => $update["responseId"],
-//             "fulfillmentText"=> "Error",
-//             "payload" => array(
-//                 "items"=>[
-//                     array(
-//                         "simpleResponse"=>
-//                     array(
-//                         "textToSpeech"=>"Bad request"
-//                          )
-//                     )
-//                 ],
-//                 ),
-           
-//         ));
-        
-//     }
-// }
- 
-// function sendMessage($parameters) {
-//     echo json_encode($parameters);
-// }
- 
-// $update_response = file_get_contents("php://input");
-// $update = json_decode($update_response, true);
-// // print_r(json_encode($update));
-// if (isset($update["queryResult"]["queryText"])) {
-//     processMessage($update);
-//     $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
-//    fwrite($myfile, $update["queryResult"]["queryText"]);
-//     fclose($myfile);
-// }else{
-//      sendMessage(array(
-//             "source" => $update["responseId"],
-//             "fulfillmentText"=> $update["queryResult"]["queryText"],
-//             "payload" => array(
-//                 "items"=>[
-//                     array(
-//                         "simpleResponse"=>
-//                     array(
-//                         "textToSpeech"=>"Bad request"
-//                          )
-//                     )
-//                 ],
-//                 ),
-           
-//         ));
-// }
 ?>

@@ -49,7 +49,7 @@ function processMessage($update) {
     if($update["queryResult"]["queryText"] == "ใช่"){
         sendMessage(array(
             "source" => $update["responseId"],
-            "fulfillmentText"=>$update['queryResult']['parameters'],
+            "fulfillmentText"=>$update['queryResult'],
 //             "fulfillmentText"=>$update['queryResult']['parameters']['codeId'],
            // "fulfillmentText"=>$update['originalDetectIntentRequest']['payload']['data']['source']['userId'],
             "payload" => array(

@@ -24,7 +24,7 @@ function processMessage($update) {
                             "imageBackgroundColor"=> "#FFFFFF",
                             "title"=> "คุณคือ ธิดารัตน์ ภู่ระหงษ์ ใช่หรือไม่?",
                             "text"=> "กรุณายืนยัน",
-                            "defaultAction"=> "",
+//                             "defaultAction"=> "",
                             "actions"=> [
                                 array(
                                   "type"=> "postback",

@@ -18,7 +18,7 @@ function processMessage($update) {
                         "altText"=> "This is a buttons template",
                         "template"=> array(
                             "type"=> "buttons",
-                            "thumbnailImageUrl"=> "http://www.pim.ac.th/uploads/content/2015/10/o_1a21hj8a0g3h16gbh3kj1pqaja.png",
+                            "thumbnailImageUrl"=> "https://huntscholarships.com/wp-content/uploads/2012/08/panyapiwat.jpg",
                             "imageAspectRatio"=> "rectangle",
                             "imageSize"=> "cover",
                             "imageBackgroundColor"=> "#FFFFFF",

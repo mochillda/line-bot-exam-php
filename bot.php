@@ -57,32 +57,10 @@ function processMessage($update) {
                     "platform"=> 'line',
                     "type"=> 4,
                     "payload"=> array(
-//                         "line"=> array(
-//                             "type"=> 'text',
-//                             "text"=> 'ข้อความที่จะตอบกลับใน LINE'
-//                         )
-                           "line"=> array(
-                                  "type"=> "template",
-                                  "altText"=>  "this is a confirm template",
-                                  "template"=>  array(
-                                    "type"=>  "confirm",
-                                    "actions"=>  [
-                                      array(
-                                        "type"=>  "message",
-                                        "label"=>  "Yes",
-                                        "text"=>  "Yes"
-                                      ),
-                                      array(
-                                        "type"=>  "message",
-                                        "label"=>  "No",
-                                        "text"=>  "No"
-                                      )
-                                    ],
-                                    "text": "Continue?"
-                                  )
-                           )
-                        
-                        
+                       "line"=> array(
+                           "type"=> 'text',
+                           "text"=> 'ข้อความที่จะตอบกลับใน LINE'
+                        )
                     )
                   )
                 ],

@@ -58,9 +58,8 @@ function processMessage($update) {
                     "type"=> 4,
                     "payload"=> array(
                        "line"=> array(
-                                "type"=> 'sticker',
-                                "packageId"=> '1',
-                                "stickerId"=> '2579'
+                         "type"=> "text",
+                         "text"=> "Hello"
                         )
                     )
                   )

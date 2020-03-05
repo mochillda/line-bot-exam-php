@@ -50,8 +50,8 @@ function processMessage($update) {
         sendMessage(array(
             "source" => $update["responseId"],
 //             "fulfillmentText"=>$update['queryResult'],
-            "fulfillmentText"=>$update,
-           // "fulfillmentText"=>$update['originalDetectIntentRequest']['payload']['data']['source']['userId'],
+//             "fulfillmentText"=>$update,
+           "fulfillmentText"=>$update['originalDetectIntentRequest']['payload']['data']['source']['userId'],
             "payload" => array(
                 "items"=>[
                     array(

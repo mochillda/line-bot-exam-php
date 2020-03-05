@@ -28,7 +28,8 @@ function processMessage($update) {
                                     array(
                                       "type"=> "postback",
                                       "label"=> "ใช่",
-                                      "data"=> "action=sendPostYes&itemid=123"
+                                      "data"=> "action=sendPostYes&itemid=123",
+                                      "displayText"=>"สั่งซื้อ"
                                     ),
                                     array(
                                       "type"=> "postback",

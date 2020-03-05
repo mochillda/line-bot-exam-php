@@ -29,12 +29,13 @@ function processMessage($update) {
                                       "type"=> "postback",
                                       "label"=> "ใช่",
                                       "data"=> "action=sendPostYes&itemid=123",
-                                      "displayText"=>"สั่งซื้อ"
+                                      "displayText"=>"ใช่"
                                     ),
                                     array(
                                       "type"=> "postback",
                                       "label"=> "ไม่ใช่",
-                                      "data"=> "action=add&itemid=123"
+                                      "data"=> "action=add&itemid=123",
+                                      "displayText"=>"ไม่ใช่"
                                     )
                                 ]
                             )

@@ -60,9 +60,9 @@ function processMessage($update) {
                        "line"=> array(
 //                            "type"=> 'text',
 //                            "text"=> 'ข้อความที่จะตอบกลับใน LINE'
-                                "type"=> "sticker",
-                                "packageId"=> "1",
-                                "stickerId"=> "2579"
+                                "type"=> 'sticker',
+                                "packageId"=> '1',
+                                "stickerId"=> '2579'
                         )
                     )
                   )

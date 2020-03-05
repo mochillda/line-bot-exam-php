@@ -13,71 +13,39 @@ function processMessage($update) {
                     "type"=> 4,
                     "payload"=> array(
                         
-                    "line"=> array(
+                      "line"=> array(
                         "type"=> "template",
-                        "altText"=> "this is a carousel template",
+                        "altText"=> "This is a buttons template",
                         "template"=> array(
-                          "type"=> "carousel",
-                          "imageAspectRatio"=> "rectangle",
-                          "imageSize"=> "cover",
-                          "columns"=> [
-                            array(
-                              "thumbnailImageUrl"=> "https://1.bp.blogspot.com/-U90M8DyKu7Q/W9EtONMCf6I/AAAAAAAAW_4/7L_jB_Rg9oweu2HKhULNdu9WNefw9zf9wCLcBGAs/s1600/sao-full.jpg",
-                              "imageBackgroundColor"=> "#FFFFFF",
-                              "title"=> "แผ่นเกม Sword Art Online",
-                              "text"=> "แผ่นเกม Sword Art Online",
-                              "defaultAction"=> array(
+                            "type"=> "buttons",
+                            "thumbnailImageUrl"=> "https://1.bp.blogspot.com/-U90M8DyKu7Q/W9EtONMCf6I/AAAAAAAAW_4/7L_jB_Rg9oweu2HKhULNdu9WNefw9zf9wCLcBGAs/s1600/sao-full.jpg",
+                            "imageAspectRatio"=> "rectangle",
+                            "imageSize"=> "cover",
+                            "imageBackgroundColor"=> "#FFFFFF",
+                            "title"=> "แผ่นเกม Sword Art Online",
+                            "text"=> "กรุณาเลือก",
+                            "defaultAction"=> array(
                                 "type"=> "uri",
-                                "label"=> "รายละเอียด",
-                                "uri"=> "https://www.google.com/"
-                              ),
-                              "actions"=> [
-                                array(
-                                  "type"=> "postback",
-                                  "label"=> "สั่งซื้อ",
-                                  "data"=> "action=buy&itemid=111"
-                                ),
-                                array(
-                                  "type"=> "postback",
-                                  "label"=> "เพิ่มลงรถเข็น",
-                                  "data"=> "action=add&itemid=111"
-                                ),
-                                array(
-                                  "type"=> "uri",
-                                  "label"=> "รายละเอียด",
-                                  "uri"=> "https://www.google.com/"
-                                )
-                              ]
+                                "label"=> "View detail",
+                                "uri"=> "https://www.google.com"
                             ),
-                            array(
-                              "thumbnailImageUrl"=> "https://2.bp.blogspot.com/-xAUbzdD07Z8/W9F4070M0JI/AAAAAAAAXAE/67QhUZB4TI4Xyu3GT2-DO0yA5XJtlij-ACLcBGAs/s1600/sao-os.jpg",
-                              "imageBackgroundColor"=> "#FFFFFF",
-                              "title"=> "Sword Art Online Ordinal Scale",
-                              "text"=> "Sword Art Online Ordinal Scale",
-                              "defaultAction"=> array(
-                                "type"=> "uri",
-                                "label"=> "รายละเอียด",
-                                "uri"=> "https://www.google.com/"
-                              ),
-                              "actions"=> [
+                            "actions"=> [
                                 array(
                                   "type"=> "postback",
                                   "label"=> "สั่งซื้อ",
-                                  "data"=> "action=buy&itemid=111"
+                                  "data"=> "action=buy&itemid=123"
                                 ),
                                 array(
                                   "type"=> "postback",
                                   "label"=> "เพิ่มลงรถเข็น",
-                                  "data"=> "action=add&itemid=111"
+                                  "data"=> "action=add&itemid=123"
                                 ),
                                 array(
                                   "type"=> "uri",
-                                  "label"=> "รายละเอียด",
-                                  "uri"=> "https://www.google.com/"
+                                  "label"=> "อ่านรายละเอียด",
+                                  "uri"=> "https://www.google.com"
                                 )
-                              ]
-                            )
-                          ]
+                            ]
                         )
                       )
                         

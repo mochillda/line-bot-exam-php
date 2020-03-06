@@ -12,59 +12,59 @@ function processMessage($update) {
                     "platform"=> 'line',
                     "type"=> 4,
                     "payload"=> array(
-                          "line"=> array(
-                                "type"=> "template",
-                                "altText"=> "this is a confirm template",
-                                "template"=> array(
-                                  "type"=> "confirm",
-                                  "text"=> "ต้องการที่จะลบข้อมูลหรือไม่?",
-                                  "actions"=> [
-                                    array(
-                                      "type"=> "message",
-                                      "label"=> "ใช่",
-                                      "text"=> "ใช่"
-                                    ),
-                                    array(
-                                      "type"=> "message",
-                                      "label"=> "ไม่",
-                                      "text"=> "ไม่"
-                                    )
-                                  ]
-                                )
-                              )
-                             
-                        
-                        
 //                           "line"=> array(
-//                             "type"=> "template",
-//                             "altText"=> "This is a buttons template",
-//                             "template"=> array(
-//                                 "type"=> "buttons",
-//                                 "thumbnailImageUrl"=> "https://huntscholarships.com/wp-content/uploads/2012/08/panyapiwat.jpg",
-//                                 "imageAspectRatio"=> "rectangle",
-//                                 "imageSize"=> "cover",
-//                                 "imageBackgroundColor"=> "#FFFFFF",
-//                                 "title"=> "คุณคือ ธิดารัตน์ฝ ภู่ระหงษ์ ใช่หรือไม่?",
-// //                                 "title"=> $update["queryResult"]["parameters"]["param-name"] ,//test11.test11-custom.test11-custom-yes
-    
-//                                 "text"=> "กรุณายืนยัน",
-// //                              "defaultAction"=> "",
-//                                 "actions"=> [
+//                                 "type"=> "template",
+//                                 "altText"=> "this is a confirm template",
+//                                 "template"=> array(
+//                                   "type"=> "confirm",
+//                                   "text"=> "ต้องการที่จะลบข้อมูลหรือไม่?",
+//                                   "actions"=> [
 //                                     array(
 //                                       "type"=> "message",
 //                                       "label"=> "ใช่",
-//                                       "data"=> "https://www.google.co.th/",
-//                                       "displayText"=>"ใช่"
+//                                       "text"=> "ใช่"
 //                                     ),
 //                                     array(
-//                                       "type"=> "postback",
-//                                       "label"=> "ไม่ใช่",
-//                                       "data"=> "action=add&itemid=123",
-//                                       "displayText"=>"ไม่ใช่"
+//                                       "type"=> "message",
+//                                       "label"=> "ไม่",
+//                                       "text"=> "ไม่"
 //                                     )
-//                                 ]
-//                             )
-//                           )
+//                                   ]
+//                                 )
+//                               )
+                             
+                        
+                        
+                          "line"=> array(
+                            "type"=> "template",
+                            "altText"=> "This is a buttons template",
+                            "template"=> array(
+                                "type"=> "buttons",
+                                "thumbnailImageUrl"=> "https://huntscholarships.com/wp-content/uploads/2012/08/panyapiwat.jpg",
+                                "imageAspectRatio"=> "rectangle",
+                                "imageSize"=> "cover",
+                                "imageBackgroundColor"=> "#FFFFFF",
+                                "title"=> "คุณคือ ธิดารัตน์ฝ ภู่ระหงษ์ ใช่หรือไม่?",
+//                                 "title"=> $update["queryResult"]["parameters"]["param-name"] ,//test11.test11-custom.test11-custom-yes
+    
+                                "text"=> "กรุณายืนยัน",
+//                              "defaultAction"=> "",
+                                "actions"=> [
+                                    array(
+                                      "type"=> "message",
+                                      "label"=> "ใช่",
+                                      "data"=> "https://www.google.co.th/",
+                                      "displayText"=>"ใช่"
+                                    ),
+                                    array(
+                                      "type"=> "postback",
+                                      "label"=> "ไม่ใช่",
+                                      "data"=> "action=add&itemid=123",
+                                      "displayText"=>"ไม่ใช่"
+                                    )
+                                ]
+                            )
+                          )
                         
                     )
                   )

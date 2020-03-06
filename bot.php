@@ -21,8 +21,8 @@ function processMessage($update) {
                                 "imageAspectRatio"=> "rectangle",
                                 "imageSize"=> "cover",
                                 "imageBackgroundColor"=> "#FFFFFF",
-                             "title"=> "คุณคือ ธิดารัตน์ ภู่ระหงษ์ ใช่หรือไม่?",
-//                              "title"=> $update["queryResult"]["action"] ,//test11.test11-custom.test11-custom-yes
+//                              "title"=> "คุณคือ ธิดารัตน์ฝ ภู่ระหงษ์ ใช่หรือไม่?",
+                                "title"=> $update["queryResult"]["parameters"] ,//test11.test11-custom.test11-custom-yes
     
                                 "text"=> "กรุณายืนยัน",
 //                              "defaultAction"=> "",
@@ -30,7 +30,7 @@ function processMessage($update) {
                                     array(
                                       "type"=> "postback",
                                       "label"=> "ใช่",
-                                      "data"=> "action=test11.test11-custom.test11-custom-yes.test11-custom-yes-custom",
+                                      "data"=> "https://www.google.co.th/",
                                       "displayText"=>"ใช่"
                                     ),
                                     array(

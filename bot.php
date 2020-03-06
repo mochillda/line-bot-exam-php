@@ -1,5 +1,5 @@
 <?php
-require "vendor/autoload.php";
+// require "vendor/autoload.php";
 
 function processMessage($update) {
 //     if($update["queryResult"]["queryText"] != "ใช่"){

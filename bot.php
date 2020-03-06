@@ -2,8 +2,8 @@
 require "vendor/autoload.php";
 
 function processMessage($update) {
-    if($update["queryResult"]["queryText"] == "ใช่"){
-        
+//     if($update["queryResult"]["queryText"] != "ใช่"){
+       if (isset($update["queryResult"]["queryText"])) {
         sendMessage(array(
             "source" => $update["responseId"],
             "fulfillmentText"=> 'ข้อความที่จะตอบกลับแบบปกติ',
@@ -82,26 +82,26 @@ function processMessage($update) {
                 ),
            
         ));
-    }else if($update["queryResult"]["queryText"] == "convert"){
-        if($update["queryResult"]["parameters"]["outputcurrency"] == "USD"){
-           $amount =  intval($update["queryResult"]["parameters"]["amountToConverte"]["amount"]);
-           $convertresult = $amount * 360;
-        }
-         sendMessage(array(
-            "source" => $update["responseId"],
-            "fulfillmentText"=>"The conversion result is".$convertresult,
-            "payload" => array(
-                "items"=>[
-                    array(
-                        "simpleResponse"=>
-                    array(
-                        "textToSpeech"=>"The conversion result is".$convertresult
-                         )
-                    )
-                ],
-                ),
+//     }else if($update["queryResult"]["queryText"] == "convert"){
+//         if($update["queryResult"]["parameters"]["outputcurrency"] == "USD"){
+//            $amount =  intval($update["queryResult"]["parameters"]["amountToConverte"]["amount"]);
+//            $convertresult = $amount * 360;
+//         }
+//          sendMessage(array(
+//             "source" => $update["responseId"],
+//             "fulfillmentText"=>"The conversion result is".$convertresult,
+//             "payload" => array(
+//                 "items"=>[
+//                     array(
+//                         "simpleResponse"=>
+//                     array(
+//                         "textToSpeech"=>"The conversion result is".$convertresult
+//                          )
+//                     )
+//                 ],
+//                 ),
            
-        ));
+//         ));
     }else{
         sendMessage(array(
             "source" => $update["responseId"],

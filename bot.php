@@ -30,7 +30,7 @@ function processMessage($update) {
                                     array(
                                       "type"=> "postback",
                                       "label"=> "ใช่",
-                                      "data"=> "action=sendPostYes&itemid=123",
+                                      "data"=> "action=test11.test11-custom.test11-custom-yes.test11-custom-yes-custom",
                                       "displayText"=>"ใช่"
                                     ),
                                     array(

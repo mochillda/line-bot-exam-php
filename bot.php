@@ -22,10 +22,10 @@ function processMessage($update) {
                                 "imageSize"=> "cover",
                                 "imageBackgroundColor"=> "#FFFFFF",
 //                              "title"=> "คุณคือ ธิดารัตน์ ภู่ระหงษ์ ใช่หรือไม่?",
-                             "title"=> $update["queryResult"]["action"] ,//test11.test11-custom.test11-custom-yes
-//                                 "title"=> ,
+//                              "title"=> $update["queryResult"]["action"] ,//test11.test11-custom.test11-custom-yes
+                                "title"=>$update["queryResult"]["fulfillmentText"] ,
                                 "text"=> "กรุณายืนยัน",
-    //                             "defaultAction"=> "",
+//                              "defaultAction"=> "",
                                 "actions"=> [
                                     array(
                                       "type"=> "postback",
@@ -122,29 +122,11 @@ function sendPostYes($parameters) {
  
 $update_response = file_get_contents("php://input");
 $update = json_decode($update_response, true);
-// print_r(json_encode($update));
-// if (isset($update["queryResult"]["queryText"])) {
-//         sendMessage(array(
-//             "source" => $update["responseId"],
-//             "fulfillmentText"=> "เข้าจ้าาาาา",
-//             "payload" => array(
-//                 "items"=>[
-//                     array(
-//                         "simpleResponse"=>
-//                     array(
-//                         "textToSpeech"=>"Bad request"
-//                          )
-//                     )
-//                 ],
-//                 ),
-           
-//         ));
-// }
+
 if (isset($update["queryResult"]["queryText"])) {
     processMessage($update);
-    
     $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
-   fwrite($myfile, $update["queryResult"]["queryText"]);
+    fwrite($myfile, $update["queryResult"]["queryText"]);
     fclose($myfile);
 }else{
      sendMessage(array(
@@ -160,7 +142,6 @@ if (isset($update["queryResult"]["queryText"])) {
                     )
                 ],
                 ),
-           
         ));
 }
 

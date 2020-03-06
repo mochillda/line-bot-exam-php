@@ -21,8 +21,9 @@ function processMessage($update) {
                                 "imageAspectRatio"=> "rectangle",
                                 "imageSize"=> "cover",
                                 "imageBackgroundColor"=> "#FFFFFF",
-//                                 "title"=> "คุณคือ ธิดารัตน์ ภู่ระหงษ์ ใช่หรือไม่?",
-                                "title"=> $update["queryResult"]["action"] ,
+//                              "title"=> "คุณคือ ธิดารัตน์ ภู่ระหงษ์ ใช่หรือไม่?",
+                             // "title"=> $update["queryResult"]["action"] ,//test11.test11-custom.test11-custom-yes
+                                "title"=> ,
                                 "text"=> "กรุณายืนยัน",
     //                             "defaultAction"=> "",
                                 "actions"=> [
@@ -121,7 +122,7 @@ function sendPostYes($parameters) {
  
 $update_response = file_get_contents("php://input");
 $update = json_decode($update_response, true);
-// print_r(json_encode($update));
+print_r(json_encode($update));
 if (isset($update["queryResult"]["queryText"])) {
     processMessage($update);
 //     sendMessage(array(

@@ -21,8 +21,8 @@ function processMessage($update) {
                                 "imageAspectRatio"=> "rectangle",
                                 "imageSize"=> "cover",
                                 "imageBackgroundColor"=> "#FFFFFF",
-//                                 "title"=> "คุณคือ ธิดารัตน์ ภู่ระหงษ์ ใช่หรือไม่?",
-                                "title"=> $update,
+                                "title"=> "คุณคือ ธิดารัตน์ ภู่ระหงษ์ ใช่หรือไม่?",
+//                                 "title"=> $update,
                                 "text"=> "กรุณายืนยัน",
     //                             "defaultAction"=> "",
                                 "actions"=> [

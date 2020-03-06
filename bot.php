@@ -44,17 +44,18 @@ function processMessage($update) {
                                 "imageAspectRatio"=> "rectangle",
                                 "imageSize"=> "cover",
                                 "imageBackgroundColor"=> "#FFFFFF",
-                                "title"=> "คุณคือ ธิดารัตน์ฝ ภู่ระหงษ์ ใช่หรือไม่?",
+                                "title"=> "คุณคือ ธิดารัตน์ ภู่ระหงษ์ ใช่หรือไม่?",
 //                                 "title"=> $update["queryResult"]["parameters"]["param-name"] ,//test11.test11-custom.test11-custom-yes
     
                                 "text"=> "กรุณายืนยัน",
 //                              "defaultAction"=> "",
                                 "actions"=> [
                                     array(
-                                      "type"=> "message",
+                                      "type"=> "postback",
                                       "label"=> "ใช่",
-                                      "data"=> "https://www.google.co.th/",
-                                      "displayText"=>"ใช่"
+                                      "data"=> "action=buy&itemid=12",
+//                                       "displayText"=>"ใช่"
+                                       "text"=>'ใช่'
                                     ),
                                     array(
                                       "type"=> "postback",

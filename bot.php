@@ -22,8 +22,8 @@ function processMessage($update) {
                                 "imageSize"=> "cover",
                                 "imageBackgroundColor"=> "#FFFFFF",
 //                              "title"=> "คุณคือ ธิดารัตน์ ภู่ระหงษ์ ใช่หรือไม่?",
-                             // "title"=> $update["queryResult"]["action"] ,//test11.test11-custom.test11-custom-yes
-                                "title"=> ,
+                             "title"=> $update["queryResult"]["action"] ,//test11.test11-custom.test11-custom-yes
+//                                 "title"=> ,
                                 "text"=> "กรุณายืนยัน",
     //                             "defaultAction"=> "",
                                 "actions"=> [
@@ -123,33 +123,10 @@ function sendPostYes($parameters) {
 $update_response = file_get_contents("php://input");
 $update = json_decode($update_response, true);
 // print_r(json_encode($update));
-if (isset($update["queryResult"]["queryText"])) {
-        sendMessage(array(
-            "source" => $update["responseId"],
-            "fulfillmentText"=> "เข้าจ้าาาาา",
-            "payload" => array(
-                "items"=>[
-                    array(
-                        "simpleResponse"=>
-                    array(
-                        "textToSpeech"=>"Bad request"
-                         )
-                    )
-                ],
-                ),
-           
-        ));
-}
 // if (isset($update["queryResult"]["queryText"])) {
-//     processMessage($update);
-    
-//     $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
-//    fwrite($myfile, $update["queryResult"]["queryText"]);
-//     fclose($myfile);
-// }else{
-//      sendMessage(array(
+//         sendMessage(array(
 //             "source" => $update["responseId"],
-//             "fulfillmentText"=> $update["queryResult"]["queryText"],
+//             "fulfillmentText"=> "เข้าจ้าาาาา",
 //             "payload" => array(
 //                 "items"=>[
 //                     array(
@@ -163,5 +140,28 @@ if (isset($update["queryResult"]["queryText"])) {
            
 //         ));
 // }
+if (isset($update["queryResult"]["queryText"])) {
+    processMessage($update);
+    
+    $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+   fwrite($myfile, $update["queryResult"]["queryText"]);
+    fclose($myfile);
+}else{
+     sendMessage(array(
+            "source" => $update["responseId"],
+            "fulfillmentText"=> $update["queryResult"]["queryText"],
+            "payload" => array(
+                "items"=>[
+                    array(
+                        "simpleResponse"=>
+                    array(
+                        "textToSpeech"=>"Bad request"
+                         )
+                    )
+                ],
+                ),
+           
+        ));
+}
 
 ?>

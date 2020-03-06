@@ -21,7 +21,8 @@ function processMessage($update) {
                                 "imageAspectRatio"=> "rectangle",
                                 "imageSize"=> "cover",
                                 "imageBackgroundColor"=> "#FFFFFF",
-                                "title"=> "คุณคือ ธิดารัตน์ ภู่ระหงษ์ ใช่หรือไม่?",
+//                                 "title"=> "คุณคือ ธิดารัตน์ ภู่ระหงษ์ ใช่หรือไม่?",
+                                "title"=> $update,
                                 "text"=> "กรุณายืนยัน",
     //                             "defaultAction"=> "",
                                 "actions"=> [
@@ -122,22 +123,22 @@ $update_response = file_get_contents("php://input");
 $update = json_decode($update_response, true);
 // print_r(json_encode($update));
 if (isset($update["queryResult"]["queryText"])) {
-//     processMessage($update);
-    sendMessage(array(
-            "source" => $update["responseId"],
-            "fulfillmentText"=> $update,
-            "payload" => array(
-                "items"=>[
-                    array(
-                        "simpleResponse"=>
-                    array(
-                        "textToSpeech"=>"Bad request"
-                         )
-                    )
-                ],
-                ),
+    processMessage($update);
+//     sendMessage(array(
+//             "source" => $update["responseId"],
+//             "fulfillmentText"=> $update,
+//             "payload" => array(
+//                 "items"=>[
+//                     array(
+//                         "simpleResponse"=>
+//                     array(
+//                         "textToSpeech"=>"Bad request"
+//                          )
+//                     )
+//                 ],
+//                 ),
            
-        ));
+//         ));
     
     $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
    fwrite($myfile, $update["queryResult"]["queryText"]);

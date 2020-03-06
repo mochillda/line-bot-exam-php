@@ -15,7 +15,7 @@ function processMessage($update) {
                            "payload"=> array(
                                           "line"=> array(
                                           "type"=> "text",
-                                          "text"=> "ลงทะเบียนสำเร็จ"
+                                          "text"=> $update['queryResult']['parameters']['codeId']//"ลงทะเบียนสำเร็จ"
                                           )
                                        )
                          )

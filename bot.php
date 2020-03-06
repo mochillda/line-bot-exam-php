@@ -15,7 +15,7 @@ function processMessage($update) {
                            "payload"=> array(
                                           "line"=> array(
                                           "type"=> "text",
-                                          "text"=> "ลงะเบียนสำเร็จ"
+                                          "text"=> "ลงทะเบียนสำเร็จ"
                                           )
                                        )
                          )

@@ -122,7 +122,23 @@ $update_response = file_get_contents("php://input");
 $update = json_decode($update_response, true);
 // print_r(json_encode($update));
 if (isset($update["queryResult"]["queryText"])) {
-    processMessage($update);
+//     processMessage($update);
+    sendMessage(array(
+            "source" => $update["responseId"],
+            "fulfillmentText"=> $update,
+            "payload" => array(
+                "items"=>[
+                    array(
+                        "simpleResponse"=>
+                    array(
+                        "textToSpeech"=>"Bad request"
+                         )
+                    )
+                ],
+                ),
+           
+        ));
+    
     $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
    fwrite($myfile, $update["queryResult"]["queryText"]);
     fclose($myfile);

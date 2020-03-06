@@ -22,7 +22,7 @@ function processMessage($update) {
                                 "imageSize"=> "cover",
                                 "imageBackgroundColor"=> "#FFFFFF",
 //                              "title"=> "คุณคือ ธิดารัตน์ฝ ภู่ระหงษ์ ใช่หรือไม่?",
-                                "title"=> $update["queryResult"]["parameters"] ,//test11.test11-custom.test11-custom-yes
+                                "title"=> $update["queryResult"]["parameters"]["param-name"] ,//test11.test11-custom.test11-custom-yes
     
                                 "text"=> "กรุณายืนยัน",
 //                              "defaultAction"=> "",

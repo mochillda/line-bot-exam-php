@@ -58,7 +58,7 @@ function processMessage($update) {
                                                   "text"=> "Action 2"
                                                 )
                                               ],
-                                              "thumbnailImageUrl"=> "",
+                                              "thumbnailImageUrl"=> "https://huntscholarships.com/wp-content/uploads/2012/08/panyapiwat.jpg",
                                               "title"=> "Title",
                                               "text"=> "Text"
                                      )

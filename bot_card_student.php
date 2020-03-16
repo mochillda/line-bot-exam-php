@@ -64,9 +64,9 @@ function processMessage($update) {
                                                  "size"=> "sm"
                                                ),
                                                array(
-                                                 "type": "icon",
-                                                 "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
-                                                 "size": "sm"
+                                                 "type"=> "icon",
+                                                 "url"=> "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                                                 "size"=> "sm"
                                                ),
                                                array(
                                                  "type"=> "icon",

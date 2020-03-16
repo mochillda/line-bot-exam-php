@@ -68,7 +68,7 @@ function processMessage($update) {
                                                   "text"=> "ตารางสอบ(ทั้งหมดของภาคการศึกษา)"
                                                 )
                                               ],
-                                              "thumbnailImageUrl"=> "",
+                                              "thumbnailImageUrl"=> "https://huntscholarships.com/wp-content/uploads/2012/08/panyapiwat.jpg",
                                               "title"=> "ข้อมูลนักศึกษา",
                                               "text"=> "กรุณาเลือก"
                                      )

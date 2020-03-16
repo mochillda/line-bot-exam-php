@@ -53,13 +53,13 @@ function processMessage($update) {
                                               "header"=> array(
                                                 "type"=> "box",
                                                 "layout"=> "vertical",
-                                                "contents"=> [
+                                                "contents"=> array(
                                                   array(
                                                     "type"=> "text",
                                                     "text"=> "Header",
                                                     "align"=> "center"
                                                   )
-                                                ]
+                                                )
                                               ),
                                               "hero"=> array(
                                                 "type"=> "image",
@@ -71,18 +71,18 @@ function processMessage($update) {
                                               "body"=> array(
                                                 "type"=> "box",
                                                 "layout"=> "vertical",
-                                                "contents"=> [
+                                                "contents"=> array(
                                                   array(
                                                     "type"=> "text",
                                                     "text"=> "Body",
                                                     "align"=> "center"
                                                   )
-                                                ]
+                                                )
                                               ),
                                               "footer"=> array(
                                                 "type"=> "box",
                                                 "layout"=> "horizontal",
-                                                "contents"=> [
+                                                "contents"=> array(
                                                   array(
                                                     "type"=> "button",
                                                     "action"=> array(
@@ -91,7 +91,7 @@ function processMessage($update) {
                                                       "uri"=> "https://linecorp.com"
                                                     )
                                                   )
-                                                ]
+                                                )
                                               )
                                            )
                                         

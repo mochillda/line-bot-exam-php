@@ -1,10 +1,39 @@
 <?php
+// require "vendor/autoload.php";
 
 function processMessage($update) {
+//     if($update["queryResult"]["queryText"] != "ใช่"){
        if (isset($update["queryResult"]["queryText"])) {
-          if($update["queryResult"]["queryText"] == "บัตร นศ."){
-              
-                sendMessage(array(
+          if($update["queryResult"]["queryText"] == "ใช่"){
+               sendMessage(array(
+                   "source" => $update["responseId"],
+                   "fulfillmentText"=> 'ข้อความที่จะตอบกลับแบบปกติ',
+                   "fulfillmentMessages"=> [
+                         array(
+                           "platform"=> 'line',
+                           "type"=> 4,
+                           "payload"=> array(
+                                          "line"=> array(
+                                          "type"=> "text",
+                                          "text"=> $update['queryResult']['parameters']['codeId']."ลงทะเบียนสำเร็จ"//"ลงทะเบียนสำเร็จ"
+                                          )
+                                       )
+                         )
+                       ],
+                   "payload" => array(
+                       "items"=>[
+                           array(
+                               "simpleResponse"=>
+                           array(
+                               "textToSpeech"=>"response from host"
+                                )
+                           )
+                       ],
+                       ),
+
+               ));
+          }else{
+               sendMessage(array(
                    "source" => $update["responseId"],
                    "fulfillmentText"=> 'ข้อความที่จะตอบกลับแบบปกติ',
                    "fulfillmentMessages"=> [
@@ -13,179 +42,37 @@ function processMessage($update) {
                            "type"=> 4,
                            "payload"=> array(
                                  "line"=> array(
-                                  array(
-                                     "type"=> "flex",
-                                     "altText"=> "Flex Message",
-                                     "contents"=> array(
-                                       "type"=> "bubble",
-                                       "hero"=> array(
-                                         "type"=> "image",
-                                         "url"=> "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_3_movie.png",
-                                         "size"=> "full",
-                                         "aspectRatio"=> "20:13",
-                                         "aspectMode"=> "cover",
-                                         "action"=> array(
-                                           "type"=> "uri",
-                                           "label"=> "Action",
-                                           "uri"=> "https://linecorp.com/"
-                                         )
-                                       ),
-                                       "body"=> array(
-                                         "type"=> "box",
-                                         "layout"=> "vertical",
-                                         "spacing"=> "md",
-                                         "contents"=> [
+                                   "type"=> "template",
+                                   "altText"=> "This is a buttons template",
+                                   "template"=> array(
+                                       "type"=> "buttons",
+                                       "thumbnailImageUrl"=> "https://huntscholarships.com/wp-content/uploads/2012/08/panyapiwat.jpg",
+                                       "imageAspectRatio"=> "rectangle",
+                                       "imageSize"=> "cover",
+                                       "imageBackgroundColor"=> "#FFFFFF",
+                                       "title"=> "คุณคือ ธิดารัตน์ ภู่ระหงษ์ ใช่หรือไม่?",
+       //                                 "title"=> $update["queryResult"]["parameters"]["param-name"] ,//test11.test11-custom.test11-custom-yes
+
+                                       "text"=> "กรุณายืนยัน",
+       //                              "defaultAction"=> "",
+                                       "actions"=> [
                                            array(
-                                             "type"=> "text",
-                                             "text"=> "BROWN'S ADVENTURE\nIN MOVIE",
-                                             "size"=> "xl",
-                                             "gravity"=> "center",
-                                             "weight"=> "bold",
-                                             "wrap"=> true
+                                             "type"=> "postback",
+                                             "label"=> "ใช่",
+                                             "data"=> "action=buy&itemid=12",
+       //                                       "displayText"=>"ใช่"
+                                              "text"=>'ใช่'
                                            ),
                                            array(
-                                             "type"=> "box",
-                                             "layout"=> "baseline",
-                                             "margin"=> "md",
-                                             "contents"=> [
-                                               array(
-                                                 "type"=> "icon",
-                                                 "url"=> "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
-                                                 "size"=> "sm"
-                                               ),
-                                               array(
-                                                 "type"=> "icon",
-                                                 "url"=> "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
-                                                 "size"=> "sm"
-                                               ),
-                                               array(
-                                                 "type"=> "icon",
-                                                 "url"=> "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
-                                                 "size"=> "sm"
-                                               ),
-                                               array(
-                                                 "type"=> "icon",
-                                                 "url"=> "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
-                                                 "size"=> "sm"
-                                               ),
-                                               array(
-                                                 "type"=> "icon",
-                                                 "url"=> "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png",
-                                                 "size"=> "sm"
-                                               ),
-                                               array(
-                                                 "type"=> "text",
-                                                 "text"=> "4.0",
-                                                 "flex"=> 0,
-                                                 "margin"=> "md",
-                                                 "size"=> "sm",
-                                                 "color"=> "#999999"
-                                               )
-                                             ]
-                                           ),
-                                           array(
-                                             "type"=> "box",
-                                             "layout"=> "vertical",
-                                             "spacing"=> "sm",
-                                             "margin"=> "lg",
-                                             "contents"=> [
-                                               array(
-                                                 "type"=> "box",
-                                                 "layout"=> "baseline",
-                                                 "spacing"=> "sm",
-                                                 "contents"=> [
-                                                   array(
-                                                     "type"=> "text",
-                                                     "text"=> "Date",
-                                                     "flex"=> 1,
-                                                     "size"=> "sm",
-                                                     "color"=> "#AAAAAA"
-                                                   ),
-                                                   array(
-                                                     "type"=> "text",
-                                                     "text"=> "Monday 25, 9:00PM",
-                                                     "flex"=> 4,
-                                                     "size"=> "sm",
-                                                     "color"=> "#666666",
-                                                     "wrap"=> true
-                                                   )
-                                                 ]
-                                               ),
-                                               array(
-                                                 "type"=> "box",
-                                                 "layout"=> "baseline",
-                                                 "spacing"=> "sm",
-                                                 "contents"=> [
-                                                   array(
-                                                     "type"=> "text",
-                                                     "text"=> "Place",
-                                                     "flex"=> 1,
-                                                     "size"=> "sm",
-                                                     "color"=> "#AAAAAA"
-                                                   ),
-                                                   array(
-                                                     "type"=> "text",
-                                                     "text"=> "7 Floor, No.3",
-                                                     "flex"=> 4,
-                                                     "size"=> "sm",
-                                                     "color"=> "#666666",
-                                                     "wrap"=> true
-                                                   )
-                                                 ]
-                                               ),
-                                               array(
-                                                 "type"=> "box",
-                                                 "layout"=> "baseline",
-                                                 "spacing"=> "sm",
-                                                 "contents"=> [
-                                                   array(
-                                                     "type"=> "text",
-                                                     "text"=> "Seats",
-                                                     "flex"=> 1,
-                                                     "size"=> "sm",
-                                                     "color"=> "#AAAAAA"
-                                                   ),
-                                                   array(
-                                                     "type"=> "text",
-                                                     "text"=> "C Row, 18 Seat",
-                                                     "flex"=> 4,
-                                                     "size"=> "sm",
-                                                     "color"=> "#666666",
-                                                     "wrap"=> true
-                                                   )
-                                                 ]
-                                               ),
-                                               array(
-                                                 "type"=> "box",
-                                                 "layout"=> "vertical",
-                                                 "margin"=> "xxl",
-                                                 "contents"=> [
-                                                   array(
-                                                     "type"=> "spacer"
-                                                   ),
-                                                   array(
-                                                     "type"=> "image",
-                                                     "url"=> "https://scdn.line-apps.com/n/channel_devcenter/img/fx/linecorp_code_withborder.png",
-                                                     "size"=> "xl",
-                                                     "aspectMode"=> "cover"
-                                                   },
-                                                   array(
-                                                     "type"=> "text",
-                                                     "text"=> "You can enter the theater by using this code instead of a ticket",
-                                                     "margin"=> "xxl",
-                                                     "size"=> "xs",
-                                                     "color"=> "#AAAAAA",
-                                                     "wrap"=> true
-                                                   )
-                                                 ]
-                                               )
-                                             ]
+                                             "type"=> "postback",
+                                             "label"=> "ไม่ใช่",
+                                             "data"=> "action=add&itemid=123",
+                                             "displayText"=>"ไม่ใช่"
                                            )
-                                         ]
-                                       )
-                                     )
+                                       ]
                                    )
                                  )
+
                            )
                          )
                        ],
@@ -202,6 +89,26 @@ function processMessage($update) {
 
                ));
           }
+//     }else if($update["queryResult"]["queryText"] == "convert"){
+//         if($update["queryResult"]["parameters"]["outputcurrency"] == "USD"){
+//            $amount =  intval($update["queryResult"]["parameters"]["amountToConverte"]["amount"]);
+//            $convertresult = $amount * 360;
+//         }
+//          sendMessage(array(
+//             "source" => $update["responseId"],
+//             "fulfillmentText"=>"The conversion result is".$convertresult,
+//             "payload" => array(
+//                 "items"=>[
+//                     array(
+//                         "simpleResponse"=>
+//                     array(
+//                         "textToSpeech"=>"The conversion result is".$convertresult
+//                          )
+//                     )
+//                 ],
+//                 ),
+           
+//         ));
     }else{
         sendMessage(array(
             "source" => $update["responseId"],

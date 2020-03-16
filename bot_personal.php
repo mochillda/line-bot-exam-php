@@ -49,8 +49,8 @@ function processMessage($update) {
                                               "actions"=> [
                                                 array(
                                                   "type"=> "message",
-                                                  "label"=> "ข้อมูลส่วนตัว",
-                                                  "text"=> "ข้อมูลส่วนตัว"
+                                                  "label"=> "บัตรนักศึกษา",
+                                                  "text"=> "บัตรนักศึกษา"
                                                 ),
                                                 array(
                                                   "type"=> "message",
@@ -59,13 +59,8 @@ function processMessage($update) {
                                                 ),
                                                 array(
                                                   "type"=> "message",
-                                                  "label"=> "E-learnig",
-                                                  "text"=> "E-learnig"
-                                                ),
-                                                array(
-                                                  "type"=> "message",
-                                                  "label"=> "ตารางสอบ1",
-                                                  "text"=> "ตารางสอบ(ทั้งหมดของภาคการศึกษา)"
+                                                  "label"=> "E-Learnig",
+                                                  "text"=> "E-Larnig"
                                                 )
                                               ],
                                               "thumbnailImageUrl"=> "https://huntscholarships.com/wp-content/uploads/2012/08/panyapiwat.jpg",

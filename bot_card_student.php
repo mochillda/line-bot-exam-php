@@ -3,35 +3,8 @@
 function processMessage($update) {
        if (isset($update["queryResult"]["queryText"])) {
           if($update["queryResult"]["queryText"] == "บัตร นศ."){
-               sendMessage(array(
-                   "source" => $update["responseId"],
-                   "fulfillmentText"=> 'ข้อความที่จะตอบกลับแบบปกติ',
-                   "fulfillmentMessages"=> [
-                         array(
-                           "platform"=> 'line',
-                           "type"=> 4,
-                           "payload"=> array(
-                                          "line"=> array(
-                                          "type"=> "text",
-                                          "text"=> $update['queryResult']['parameters']['codeId']."ลงทะเบียนสำเร็จ"//"ลงทะเบียนสำเร็จ"
-                                          )
-                                       )
-                         )
-                       ],
-                   "payload" => array(
-                       "items"=>[
-                           array(
-                               "simpleResponse"=>
-                           array(
-                               "textToSpeech"=>"response from host"
-                                )
-                           )
-                       ],
-                       ),
-
-               ));
-          }else{
-               sendMessage(array(
+              
+                sendMessage(array(
                    "source" => $update["responseId"],
                    "fulfillmentText"=> 'ข้อความที่จะตอบกลับแบบปกติ',
                    "fulfillmentMessages"=> [
@@ -49,16 +22,12 @@ function processMessage($update) {
                                        "imageSize"=> "cover",
                                        "imageBackgroundColor"=> "#FFFFFF",
                                        "title"=> "คุณคือ ธิดารัตน์ ภู่ระหงษ์ ใช่หรือไม่?",
-       //                                 "title"=> $update["queryResult"]["parameters"]["param-name"] ,//test11.test11-custom.test11-custom-yes
-
                                        "text"=> "กรุณายืนยัน",
-       //                              "defaultAction"=> "",
                                        "actions"=> [
                                            array(
                                              "type"=> "postback",
                                              "label"=> "ใช่",
                                              "data"=> "action=buy&itemid=12",
-       //                                       "displayText"=>"ใช่"
                                               "text"=>'ใช่'
                                            ),
                                            array(

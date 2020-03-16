@@ -41,36 +41,58 @@ function processMessage($update) {
                            "platform"=> 'line',
                            "type"=> 4,
                            "payload"=> array(
+                                  
                                  "line"=> array(
-                                   "type"=> "template",
-                                   "altText"=> "This is a buttons template",
-                                   "template"=> array(
-                                       "type"=> "buttons",
-                                       "thumbnailImageUrl"=> "https://huntscholarships.com/wp-content/uploads/2012/08/panyapiwat.jpg",
-                                       "imageAspectRatio"=> "rectangle",
-                                       "imageSize"=> "cover",
-                                       "imageBackgroundColor"=> "#FFFFFF",
-                                       "title"=> "คุณคือ ธิดารัตน์ ภู่ระหงษ์ ใช่หรือไม่?",
-       //                                 "title"=> $update["queryResult"]["parameters"]["param-name"] ,//test11.test11-custom.test11-custom-yes
+                                            "type"=> "flex",
+                                            "altText"=> "Flex Message",
+                                            "contents"=> array(
+                                              "type"=> "bubble",
+                                              "direction"=> "ltr",
+                                              "header"=> array(
+                                                "type"=> "box",
+                                                "layout"=> "vertical",
+                                                "contents"=> [
+                                                  {
+                                                    "type"=> "text",
+                                                    "text"=> "Header",
+                                                    "align"=> "center"
+                                                  }
+                                                ]
+                                              },
+                                              "hero"=> array(
+                                                "type"=> "image",
+                                                "url"=> "https://developers.line.biz/assets/images/services/bot-designer-icon.png",
+                                                "size"=> "full",
+                                                "aspectRatio"=> "1.51:1",
+                                                "aspectMode"=> "fit"
+                                              },
+                                              "body"=> array(
+                                                "type"=> "box",
+                                                "layout"=> "vertical",
+                                                "contents"=> [
+                                                  {
+                                                    "type"=> "text",
+                                                    "text"=> "Body",
+                                                    "align"=> "center"
+                                                  }
+                                                ]
+                                              },
+                                              "footer"=> array(
+                                                "type"=>  "box",
+                                                "layout"=> "horizontal",
+                                                "contents"=>  [
+                                                  array(
+                                                    "type"=> "button",
+                                                    "action"=> array(
+                                                             "type"=> "uri",
+                                                             "label"=> "Button",
+                                                             "uri"=> "https://linecorp.com"
+                                                    )
+                                                  )
+                                                ]
+                                              )
+                                            )
 
-                                       "text"=> "กรุณายืนยัน",
-       //                              "defaultAction"=> "",
-                                       "actions"=> [
-                                           array(
-                                             "type"=> "postback",
-                                             "label"=> "ใช่",
-                                             "data"=> "action=buy&itemid=12",
-       //                                       "displayText"=>"ใช่"
-                                              "text"=>'ใช่'
-                                           ),
-                                           array(
-                                             "type"=> "postback",
-                                             "label"=> "ไม่ใช่",
-                                             "data"=> "action=add&itemid=123",
-                                             "displayText"=>"ไม่ใช่"
-                                           )
-                                       ]
-                                   )
                                  )
 
                            )
@@ -89,26 +111,6 @@ function processMessage($update) {
 
                ));
           }
-//     }else if($update["queryResult"]["queryText"] == "convert"){
-//         if($update["queryResult"]["parameters"]["outputcurrency"] == "USD"){
-//            $amount =  intval($update["queryResult"]["parameters"]["amountToConverte"]["amount"]);
-//            $convertresult = $amount * 360;
-//         }
-//          sendMessage(array(
-//             "source" => $update["responseId"],
-//             "fulfillmentText"=>"The conversion result is".$convertresult,
-//             "payload" => array(
-//                 "items"=>[
-//                     array(
-//                         "simpleResponse"=>
-//                     array(
-//                         "textToSpeech"=>"The conversion result is".$convertresult
-//                          )
-//                     )
-//                 ],
-//                 ),
-           
-//         ));
     }else{
         sendMessage(array(
             "source" => $update["responseId"],

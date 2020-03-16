@@ -66,11 +66,6 @@ function processMessage($update) {
                                                   "type"=> "message",
                                                   "label"=> "ตารางสอบ1",
                                                   "text"=> "ตารางสอบ(ทั้งหมดของภาคการศึกษา)"
-                                                ),
-                                                array(
-                                                  "type"=> "message",
-                                                  "label"=> "ตารางสอบ2",
-                                                  "text"=> "ตารางสอบ"
                                                 )
                                               ],
                                               "thumbnailImageUrl"=> "https://huntscholarships.com/wp-content/uploads/2012/08/panyapiwat.jpg",

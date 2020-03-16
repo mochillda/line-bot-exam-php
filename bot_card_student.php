@@ -58,7 +58,7 @@ function processMessage($update) {
                                                   "text"=> "Action 2"
                                                 )
                                               ],
-                                              "thumbnailImageUrl"=> "SPECIFY_YOUR_IMAGE_URL",
+                                              "thumbnailImageUrl"=> "",
                                               "title"=> "Title",
                                               "text"=> "Text"
                                      )

@@ -43,10 +43,10 @@ function processMessage($update) {
                            "payload"=> array(
                                   //--------------
                                  "line"=> array(
-                                   "type": "flex",
-                                     "altText": "Flex Message",
+                                   "type"=> "flex",
+                                     "altText"=> "Flex Message",
                                      "contents"=> array(
-                                       "type": "bubble",
+                                       "type"=> "bubble",
                                        "hero"=> array(
                                          "type"=> "image",
                                          "url"=> "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_3_movie.png",

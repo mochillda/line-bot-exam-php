@@ -56,17 +56,17 @@ function processMessage($update) {
                                                   "type"=> "message",
                                                   "label"=> "REG",
                                                   "text"=> "REG"
-                                                )
-//                                                 array(
-//                                                   "type"=> "message",
-//                                                   "label"=> "E-learnig",
-//                                                   "text"=> "E-learnig"
-//                                                 ),
-//                                                 array(
-//                                                   "type"=> "message",
-//                                                   "label"=> "ตารางสอบ(ทั้งหมดของภาคการศึกษา)",
-//                                                   "text"=> "ตารางสอบ(ทั้งหมดของภาคการศึกษา)"
-//                                                 ),
+                                                ),
+                                                array(
+                                                  "type"=> "message",
+                                                  "label"=> "E-learnig",
+                                                  "text"=> "E-learnig"
+                                                ),
+                                                array(
+                                                  "type"=> "message",
+                                                  "label"=> "ตารางสอบ1",
+                                                  "text"=> "ตารางสอบ(ทั้งหมดของภาคการศึกษา)"
+                                                )//,
 //                                                 array(
 //                                                   "type"=> "message",
 //                                                   "label"=> "ตารางสอบ",

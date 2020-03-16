@@ -82,7 +82,7 @@ function processMessage($update) {
                                          "layout"=> "horizontal",
                                          "contents"=>[
                                            array(
-                                             "type": "button",
+                                             "type"=> "button",
                                              "action"=> array(
                                                "type"=> "uri",
                                                "label"=> "Button",

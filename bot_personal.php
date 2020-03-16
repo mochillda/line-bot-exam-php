@@ -49,18 +49,33 @@ function processMessage($update) {
                                               "actions"=> [
                                                 array(
                                                   "type"=> "message",
-                                                  "label"=> "Action 1",
-                                                  "text"=> "Action 1"
+                                                  "label"=> "ข้อมูลส่วนตัว",
+                                                  "text"=> "ข้อมูลส่วนตัว"
                                                 ),
                                                 array(
                                                   "type"=> "message",
-                                                  "label"=> "Action 2",
-                                                  "text"=> "Action 2"
+                                                  "label"=> "REG",
+                                                  "text"=> "REG"
+                                                ),
+                                                array(
+                                                  "type"=> "message",
+                                                  "label"=> "E-learnig",
+                                                  "text"=> "E-learnig"
+                                                ),
+                                                array(
+                                                  "type"=> "message",
+                                                  "label"=> "ตารางสอบ(ทั้งหมดของภาคการศึกษา)",
+                                                  "text"=> "ตารางสอบ(ทั้งหมดของภาคการศึกษา)"
+                                                ),
+                                                array(
+                                                  "type"=> "message",
+                                                  "label"=> "ตารางสอบ",
+                                                  "text"=> "ตารางสอบ"
                                                 )
                                               ],
                                               "thumbnailImageUrl"=> "https://huntscholarships.com/wp-content/uploads/2012/08/panyapiwat.jpg",
-                                              "title"=> "Title",
-                                              "text"=> "Text"
+                                              "title"=> "ข้อมูลนักศึกษา",
+                                              "text"=> "กรุณาเลือก"
                                      )
 
                                  )

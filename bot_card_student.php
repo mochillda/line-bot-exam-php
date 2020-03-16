@@ -43,55 +43,55 @@ function processMessage($update) {
                            "payload"=> array(
                                   //--------------
                                  "line"=> array(
-                                       "type": "flex",
-                                     "altText": "Flex Message",
-                                     "contents": {
-                                       "type": "bubble",
-                                       "direction": "ltr",
-                                       "header": {
-                                         "type": "box",
-                                         "layout": "vertical",
-                                         "contents": [
-                                           {
-                                             "type": "text",
-                                             "text": "Header",
-                                             "align": "center"
-                                           }
+                                     "type"=> "flex",
+                                     "altText"=> "Flex Message",
+                                     "contents"=> array(
+                                       "type"=> "bubble",
+                                       "direction"=> "ltr",
+                                       "header"=> array(
+                                         "type"=> "box",
+                                         "layout"=> "vertical",
+                                         "contents"=> [
+                                           array(
+                                             "type"=> "text",
+                                             "text"=> "Header",
+                                             "align"=> "center"
+                                           )
                                          ]
-                                       },
-                                       "hero": {
-                                         "type": "image",
-                                         "url": "https://developers.line.biz/assets/images/services/bot-designer-icon.png",
-                                         "size": "full",
-                                         "aspectRatio": "1.51:1",
-                                         "aspectMode": "fit"
-                                       },
-                                       "body": {
-                                         "type": "box",
-                                         "layout": "vertical",
-                                         "contents": [
-                                           {
-                                             "type": "text",
-                                             "text": "Body",
-                                             "align": "center"
-                                           }
+                                       ),
+                                       "hero"=> array(
+                                         "type"=> "image",
+                                         "url"=> "https://developers.line.biz/assets/images/services/bot-designer-icon.png",
+                                         "size"=> "full",
+                                         "aspectRatio"=> "1.51:1",
+                                         "aspectMode"=> "fit"
+                                       ),
+                                       "body"=> array(
+                                         "type"=> "box",
+                                         "layout"=> "vertical",
+                                         "contents"=> [
+                                           array(
+                                             "type"=> "text",
+                                             "text"=> "Body",
+                                             "align"=> "center"
+                                           )
                                          ]
-                                       },
-                                       "footer": {
-                                         "type": "box",
-                                         "layout": "horizontal",
-                                         "contents": [
-                                           {
+                                       ),
+                                       "footer"=> array(
+                                         "type"=>"box",
+                                         "layout"=> "horizontal",
+                                         "contents"=>[
+                                           array(
                                              "type": "button",
-                                             "action": {
-                                               "type": "uri",
-                                               "label": "Button",
-                                               "uri": "https://linecorp.com"
-                                             }
-                                           }
+                                             "action"=> array(
+                                               "type"=> "uri",
+                                               "label"=> "Button",
+                                               "uri"=> "https://linecorp.com"
+                                             )
+                                           )
                                          ]
-                                       }
-                                     }
+                                       )
+                                    )
                                           
 
                                   )

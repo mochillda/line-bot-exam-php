@@ -43,57 +43,7 @@ function processMessage($update) {
                            "payload"=> array(
                                   //--------------
                                  "line"=> array(
-                                     "type"=> "flex",
-                                     "altText"=> "Flex Message",
-                                     "contents"=> array(
-                                       "type"=> "bubble",
-                                       "direction"=> "ltr",
-                                       "header"=> array(
-                                         "type"=> "box",
-                                         "layout"=> "vertical",
-                                         "contents"=> [
-                                           array(
-                                             "type"=> "text",
-                                             "text"=> "Header",
-                                             "align"=> "center"
-                                           )
-                                         ]
-                                       ),
-                                       "hero"=> array(
-                                         "type"=> "image",
-                                         "url"=> "https://developers.line.biz/assets/images/services/bot-designer-icon.png",
-                                         "size"=> "full",
-                                         "aspectRatio"=> "1.51:1",
-                                         "aspectMode"=> "fit"
-                                       ),
-                                       "body"=> array(
-                                         "type"=> "box",
-                                         "layout"=> "vertical",
-                                         "contents"=> [
-                                           array(
-                                             "type"=> "text",
-                                             "text"=> "Body",
-                                             "align"=> "center"
-                                           )
-                                         ]
-                                       ),
-                                       "footer"=> array(
-                                         "type"=>"box",
-                                         "layout"=> "horizontal",
-                                         "contents"=>[
-                                           array(
-                                             "type"=> "button",
-                                             "action"=> array(
-                                               "type"=> "uri",
-                                               "label"=> "Button",
-                                               "uri"=> "https://linecorp.com"
-                                             )
-                                           )
-                                         ]
-                                       )
-                                    )
-                                          
-
+                                 
                                   )
                                   //-------------
 

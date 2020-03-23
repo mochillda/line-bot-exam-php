@@ -66,6 +66,11 @@ function processMessage($update) {
                                                   "type"=> "message",
                                                   "label"=> "EEE",
                                                   "text"=> "EEE"
+                                                ),
+                                                array(
+                                                  "type"=> "message",
+                                                  "label"=> "DDD",
+                                                  "text"=> "DDD"
                                                 )
                                               ],
                                               "thumbnailImageUrl"=> "https://huntscholarships.com/wp-content/uploads/2012/08/panyapiwat.jpg",

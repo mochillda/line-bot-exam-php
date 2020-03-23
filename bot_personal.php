@@ -61,6 +61,11 @@ function processMessage($update) {
                                                   "type"=> "message",
                                                   "label"=> "E-Learnig",
                                                   "text"=> "E-Larnig"
+                                                ),
+                                                array(
+                                                  "type"=> "message",
+                                                  "label"=> "DDDD",
+                                                  "text"=> "DDDD"
                                                 )
                                               ],
                                               "thumbnailImageUrl"=> "https://huntscholarships.com/wp-content/uploads/2012/08/panyapiwat.jpg",

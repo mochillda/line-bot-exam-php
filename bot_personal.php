@@ -11,7 +11,7 @@ function processMessage($update) {
                    "fulfillmentMessages"=> [
                          array(
                            "platform"=> 'line',
-                           "type"=> 4,
+                           "type"=> 'buttons',
                            "payload"=> array(
                                           "line"=> array(
                                           "type"=> "text",

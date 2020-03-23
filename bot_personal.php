@@ -39,7 +39,7 @@ function processMessage($update) {
                    "fulfillmentMessages"=> [
                          array(
                            "platform"=> 'line',
-                           "type"=> 4,
+                           "type"=> 5,
                            "payload"=> array(
                                  "line"=> array(
                                      "type"=> "template",

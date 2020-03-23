@@ -45,7 +45,7 @@ function processMessage($update) {
                                      "type"=> "template",
                                      "altText"=> "this is a buttons template",
                                      "template" => array(
-                                              "type"=> 4,
+                                              "type"=> "buttons",
                                               "actions"=> [
                                                 array(
                                                   "type"=> "message",

@@ -31,7 +31,7 @@ function processMessage($update) {
                               ],
                        ),
                ));
-          }else{
+          }else if($update["queryResult"]["queryText"] == "บัตร นศ."){
                sendMessage(array(
                    "source" => $update["responseId"],
                    "fulfillmentText"=> 'ข้อความที่จะตอบกลับแบบปกติ',

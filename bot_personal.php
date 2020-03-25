@@ -99,20 +99,138 @@ function processMessage($update) {
                            "payload"=> array(
                                   
                                  "line"=> array(
-                                     "type"=> "template",
-                                     "altText"=> "this is a buttons template",
-                                     "template" => array(
-                                              "type"=> "buttons",
-                                              "actions"=> [
-                                                array(
-                                                  "type"=> "message",
-                                                  "label"=> "บัตรนักศึกษา",
-                                                  "text"=> "บัตรนักศึกษา"
-                                                )
-                                              ],
-                                              "thumbnailImageUrl"=> "https://huntscholarships.com/wp-content/uploads/2012/08/panyapiwat.jpg",
-                                              "title"=> "ข้อมูลนักศึกษา",
-                                              "text"=> "กรุณาเลือก"
+                                    "type"=> "flex",
+                                     "altText"=> "Flex Message",
+                                     "contents"=> array(
+                                       "type"=> "bubble",
+                                       "hero"=> array(
+                                         "type"=> "image",
+                                         "url"=> "https://huntscholarships.com/wp-content/uploads/2012/08/panyapiwat.jpg",
+                                         "size"=> "full",
+                                         "aspectRatio"=> "20:13",
+                                         "aspectMode"=> "cover",
+                                         "action"=> array(
+                                           "type"=> "uri",
+                                           "label"=> "Line",
+                                           "uri"=> "https://linecorp.com/"
+                                         )
+                                       ),
+                                       "body"=> array(
+                                         "type"=> "box",
+                                         "layout"=> "vertical",
+                                         "contents"=> [
+                                           array(
+                                             "type"=> "text",
+                                             "text"=> "Q&A",
+                                             "size"=> "xl",
+                                             "weight"=> "bold"
+                                           ),
+                                           array(
+                                             "type"=> "box",
+                                             "layout"=> "vertical",
+                                             "spacing"=> "sm",
+                                             "margin"=> "lg",
+                                             "contents"=> [
+                                               array(
+                                                 "type"=> "box",
+                                                 "layout"=> "baseline",
+                                                 "spacing"=> "sm",
+                                                 "contents"=> [
+                                                   array(
+                                                     "type"=> "text",
+                                                     "text"=> "คำอธิบาย",
+                                                     "flex"=> 2,
+                                                     "size"=> "sm",
+                                                     "color"=> "#AAAAAA"
+                                                   ),
+                                                   array(
+                                                     "type"=> "text",
+                                                     "text"=>"คำถามที่นักศึกษาถามบ่อย",
+                                                     "flex"=> 5,
+                                                     "size"=> "sm",
+                                                     "color"=> "#666666",
+                                                     "wrap"=> true
+                                                   )
+                                                 ]
+                                               ),
+                                               array(
+                                                 "type"=> "box",
+                                                 "layout"=> "baseline",
+                                                 "spacing"=> "sm",
+                                                 "contents"=> [
+                                                   array(
+                                                     "type"=> "text",
+                                                     "text"=> "กรุณาเลือก",
+                                                     "flex"=> 2,
+                                                     "size"=> "sm",
+                                                     "color"=> "#AAAAAA"
+                                                   ),
+                                                   array(
+                                                     "type"=> "text",
+                                                     "text"=> "ตามหมวดหมู่",
+                                                     "flex"=> 5,
+                                                     "size"=> "sm",
+                                                     "color"=> "#666666",
+                                                     "wrap"=> true
+                                                   )
+                                                 ]
+                                               )
+                                             ]
+                                           )
+                                         ]
+                                       ),
+                                       "footer"=> array(
+                                         "type"=> "box",
+                                         "layout"=> "vertical",
+                                         "flex"=> 0,
+                                         "spacing"=> "sm",
+                                         "contents"=> [
+                                           array(
+                                             "type"=> "spacer",
+                                             "size"=> "sm"
+                                           ),
+                                           array(
+                                             "type"=> "button",
+                                             "action"=> array(
+                                               "type"=> "message",
+                                               "label"=> "ระบบ REG",
+                                               "text"=> "ระบบ REG"
+                                             )
+                                           ),
+                                           array(
+                                             "type"=> "button",
+                                             "action"=> array(
+                                               "type"=> "message",
+                                               "label"=> "ระบบ E-Learning",
+                                               "text"=> "ระบบ E-Learning"
+                                             )
+                                           ),
+                                           array(
+                                             "type"=> "button",
+                                             "action"=> array(
+                                               "type"=> "message",
+                                               "label"=> "ระบบ Internal Servic",
+                                               "text"=> "ระบบ Internal Service"
+                                             )
+                                           ),
+                                           array(
+                                             "type"=> "button",
+                                             "action"=> array(
+                                               "type"=> "message",
+                                               "label"=> "ระบบ PIM Application",
+                                               "text"=> "ระบบ PIM Application"
+                                             )
+                                           ),
+                                           array(
+                                             "type"=> "button",
+                                             "action"=> array(
+                                               "type"=> "message",
+                                               "label"=> "ระบบ Room Tracking",
+                                               "text"=> "ระบบ Room Tracking"
+                                             )
+                                           )
+                                         ]
+                                       )
                                      )
                                  )
 

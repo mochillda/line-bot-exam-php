@@ -89,6 +89,48 @@ function processMessage($update) {
                        ),
 
                ));
+          }else if($update["queryResult"]["queryText"] == "คำถาม"){
+               sendMessage(array(
+                   "source" => $update["responseId"],
+                   "fulfillmentText"=> 'ข้อความที่จะตอบกลับแบบปกติ',
+                   "fulfillmentMessages"=> [
+                         array(
+                           "platform"=> 'line',
+                           "payload"=> array(
+                                  
+                                 "line"=> array(
+                                     "type"=> "template",
+                                     "altText"=> "this is a buttons template",
+                                     "template" => array(
+                                              "type"=> "buttons",
+                                              "actions"=> [
+                                                array(
+                                                  "type"=> "message",
+                                                  "label"=> "บัตรนักศึกษา",
+                                                  "text"=> "บัตรนักศึกษา"
+                                                )
+                                              ],
+                                              "thumbnailImageUrl"=> "https://huntscholarships.com/wp-content/uploads/2012/08/panyapiwat.jpg",
+                                              "title"=> "ข้อมูลนักศึกษา",
+                                              "text"=> "กรุณาเลือก"
+                                     )
+                                 )
+
+                           )
+                         )
+                       ],
+                       "payload" => array(
+                              "items"=>[
+                                  array(
+                                      "simpleResponse"=>
+                                         array(
+                                             "textToSpeech"=>"response from host"
+                                              )
+                                  )
+                              ],
+                       ),
+
+               ));
           }
 
     }else{

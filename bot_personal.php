@@ -121,7 +121,7 @@ function processMessage($update) {
                                          "contents"=> [
                                            array(
                                              "type"=> "text",
-                                             "text"=> "Q&A",
+                                             "text"=> "Q&A"
 //                                              "size"=> "xl",
 //                                              "weight"=> "bold"
                                            ),
@@ -249,7 +249,8 @@ function processMessage($update) {
                        ),
 
                ));
-          }else if($update["queryResult"]["queryText"] == "อื่นๆ"){
+          }
+              else if($update["queryResult"]["queryText"] == "อื่นๆ"){
                sendMessage(array(
                    "source" => $update["responseId"],
                    "fulfillmentText"=> 'ข้อความที่จะตอบกลับแบบปกติ',

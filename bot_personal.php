@@ -122,32 +122,32 @@ function processMessage($update) {
                                            array(
                                              "type"=> "text",
                                              "text"=> "Q&A",
-                                             "size"=> "xl",
-                                             "weight"=> "bold"
+//                                              "size"=> "xl",
+//                                              "weight"=> "bold"
                                            ),
                                            array(
                                              "type"=> "box",
                                              "layout"=> "vertical",
-                                             "spacing"=> "sm",
-                                             "margin"=> "lg",
+//                                              "spacing"=> "sm",
+//                                              "margin"=> "lg",
                                              "contents"=> [
                                                array(
                                                  "type"=> "box",
                                                  "layout"=> "baseline",
-                                                 "spacing"=> "sm",
+//                                                  "spacing"=> "sm",
                                                  "contents"=> [
                                                    array(
                                                      "type"=> "text",
                                                      "text"=> "คำอธิบาย",
-                                                     "flex"=> 2,
-                                                     "size"=> "sm",
+//                                                      "flex"=> 2,
+//                                                      "size"=> "sm",
                                                      "color"=> "#AAAAAA"
                                                    ),
                                                    array(
                                                      "type"=> "text",
                                                      "text"=>"คำถามที่นักศึกษาถามบ่อย",
-                                                     "flex"=> 5,
-                                                     "size"=> "sm",
+//                                                      "flex"=> 5,
+//                                                      "size"=> "sm",
                                                      "color"=> "#666666",
                                                      "wrap"=> true
                                                    )
@@ -156,20 +156,20 @@ function processMessage($update) {
                                                array(
                                                  "type"=> "box",
                                                  "layout"=> "baseline",
-                                                 "spacing"=> "sm",
+//                                                  "spacing"=> "sm",
                                                  "contents"=> [
                                                    array(
                                                      "type"=> "text",
                                                      "text"=> "กรุณาเลือก",
-                                                     "flex"=> 2,
-                                                     "size"=> "sm",
+//                                                      "flex"=> 2,
+//                                                      "size"=> "sm",
                                                      "color"=> "#AAAAAA"
                                                    ),
                                                    array(
                                                      "type"=> "text",
                                                      "text"=> "ตามหมวดหมู่",
-                                                     "flex"=> 5,
-                                                     "size"=> "sm",
+//                                                      "flex"=> 5,
+//                                                      "size"=> "sm",
                                                      "color"=> "#666666",
                                                      "wrap"=> true
                                                    )
@@ -182,13 +182,13 @@ function processMessage($update) {
                                        "footer"=> array(
                                          "type"=> "box",
                                          "layout"=> "vertical",
-                                         "flex"=> 0,
-                                         "spacing"=> "sm",
+//                                          "flex"=> 0,
+//                                          "spacing"=> "sm",
                                          "contents"=> [
-                                           array(
-                                             "type"=> "spacer",
-                                             "size"=> "sm"
-                                           ),
+//                                            array(
+//                                              "type"=> "spacer",
+//                                              "size"=> "sm"
+//                                            ),
                                            array(
                                              "type"=> "button",
                                              "action"=> array(

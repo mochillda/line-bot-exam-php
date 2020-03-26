@@ -249,6 +249,36 @@ function processMessage($update) {
                        ),
 
                ));
+          }else if($update["queryResult"]["queryText"] == "อื่นๆ"){
+               sendMessage(array(
+                   "source" => $update["responseId"],
+                   "fulfillmentText"=> 'ข้อความที่จะตอบกลับแบบปกติ',
+                   "fulfillmentMessages"=> [
+                         array(
+                           "platform"=> 'line',
+                           "payload"=> array(
+                                  
+                                 "line"=> array(
+                                       "type"=> "text",
+                                        "text"=> "Hello"
+                                  )
+                    
+
+                           )
+                         )
+                       ],
+                       "payload" => array(
+                              "items"=>[
+                                  array(
+                                      "simpleResponse"=>
+                                         array(
+                                             "textToSpeech"=>"response from host"
+                                              )
+                                  )
+                              ],
+                       ),
+
+               ));
           }
 
     }else{

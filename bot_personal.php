@@ -259,8 +259,159 @@ function processMessage($update) {
                            "payload"=> array(
                                   
                                  "line"=> array(
-                                       "type"=> "text",
-                                        "text"=> "Hello"
+                                     "type"=> "flex",
+                                     "altText"=> "Flex Message",
+                                     "contents"=> array(
+                                       "type"=> "bubble",
+                                       "hero"=> array(
+                                         "type"=> "image",
+                                         "url"=> "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+                                         "size"=> "full",
+                                         "aspectRatio"=> "20:13",
+                                         "aspectMode"=> "cover",
+                                         "action"=> array(
+                                           "type"=> "uri",
+                                           "label"=> "Line",
+                                           "uri"=> "https://linecorp.com/"
+                                         )
+                                       ),
+                                       "body"=> array(
+                                         "type"=> "box",
+                                         "layout"=> "vertical",
+                                         "contents"=> [
+                                           array(
+                                             "type"=> "text",
+                                             "text"=> "Brown Cafe",
+                                             "size"=> "xl",
+                                             "weight"=> "bold"
+                                           ),
+                                           array(
+                                             "type"=> "box",
+                                             "layout"=> "baseline",
+                                             "margin"=> "md",
+                                             "contents"=> [
+                                               array(
+                                                 "type"=> "icon",
+                                                 "url"=> "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                                                 "size"=> "sm"
+                                               ),
+                                               array(
+                                                 "type"=> "icon",
+                                                 "url"=> "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                                                 "size"=> "sm"
+                                               ),
+                                               array(
+                                                 "type"=> "icon",
+                                                 "url"=> "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                                                 "size"=> "sm"
+                                               ),
+                                               array(
+                                                 "type"=> "icon",
+                                                 "url"=> "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                                                 "size"=> "sm"
+                                               ),
+                                               array(
+                                                 "type"=> "icon",
+                                                 "url"=> "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png",
+                                                 "size"=> "sm"
+                                               ),
+                                               array(
+                                                 "type"=> "text",
+                                                 "text"=> "4.0",
+                                                 "flex"=> 0,
+                                                 "margin"=> "md",
+                                                 "size"=> "sm",
+                                                 "color"=> "#999999"
+                                               )
+                                             ]
+                                           ),
+                                           array(
+                                             "type"=> "box",
+                                             "layout"=> "vertical",
+                                             "spacing"=> "sm",
+                                             "margin"=> "lg",
+                                             "contents"=> [
+                                               array(
+                                                 "type"=> "box",
+                                                 "layout"=> "baseline",
+                                                 "spacing"=> "sm",
+                                                 "contents"=> [
+                                                   array(
+                                                     "type"=> "text",
+                                                     "text"=> "Place",
+                                                     "flex"=> 1,
+                                                     "size"=> "sm",
+                                                     "color"=> "#AAAAAA"
+                                                   ),
+                                                   array(
+                                                     "type"=> "text",
+                                                     "text"=> "Miraina Tower, 4-1-6 Shinjuku, Tokyo",
+                                                     "flex"=> 5,
+                                                     "size"=> "sm",
+                                                     "color"=> "#666666",
+                                                     "wrap"=> true
+                                                   )
+                                                 ]
+                                               ),
+                                               array(
+                                                 "type"=> "box",
+                                                 "layout"=> "baseline",
+                                                 "spacing"=> "sm",
+                                                 "contents"=> [
+                                                   array(
+                                                     "type"=> "text",
+                                                     "text"=> "Time",
+                                                     "flex"=> 1,
+                                                     "size"=> "sm",
+                                                     "color"=> "#AAAAAA"
+                                                   ),
+                                                   array(
+                                                     "type"=> "text",
+                                                     "text"=> "10:00 - 23:00",
+                                                     "flex"=> 5,
+                                                     "size"=> "sm",
+                                                     "color"=> "#666666",
+                                                     "wrap"=> true
+                                                   )
+                                                 ]
+                                               )
+                                             ]
+                                           )
+                                         ]
+                                       ),
+                                       "footer"=> array(
+                                         "type"=> "box",
+                                         "layout"=> "vertical",
+                                         "flex"=> 0,
+                                         "spacing"=> "sm",
+                                         "contents"=> [
+                                           array(
+                                             "type"=> "button",
+                                             "action"=> array(
+                                               "type"=> "uri",
+                                               "label"=> "CALL",
+                                               "uri"=> "https://linecorp.com"
+                                             ),
+                                             "height"=> "sm",
+                                             "style"=> "link"
+                                           ),
+                                           array(
+                                             "type"=> "button",
+                                             "action"=> array(
+                                               "type"=> "uri",
+                                               "label"=> "WEBSITE",
+                                               "uri"=> "https://linecorp.com"
+                                             ),
+                                             "height"=> "sm",
+                                             "style"=> "link"
+                                           ),
+                                           array(
+                                             "type"=> "spacer",
+                                             "size"=> "sm"
+                                           )
+                                         ]
+                                       )
+                                     )
                                   )
                     
 

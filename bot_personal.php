@@ -121,9 +121,9 @@ function processMessage($update) {
                                          "contents"=> [
                                            array(
                                              "type"=> "text",
-                                             "text"=> "Q&A"
-//                                              "size"=> "xl",
-//                                              "weight"=> "bold"
+                                             "text"=> "Q&A",
+                                              "size"=> "xl",
+                                              "weight"=> "bold"
                                            ),
                                            array(
                                              "type"=> "box",

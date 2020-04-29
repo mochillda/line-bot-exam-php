@@ -15,7 +15,7 @@ function processMessage($update) {
                            "payload"=> array(
                                           "line"=> array(
                                           "type"=> "text",
-                                          "text"=> $update['queryResult']['parameters']."ลงทะเบียนสำเร็จ"//"ลงทะเบียนสำเร็จ"
+                                          "text"=> $update['originalDetectIntentRequest']['payload']['data']['source']['userId']."ลงทะเบียนสำเร็จ"//"ลงทะเบียนสำเร็จ"
                                        )
                             )
                          )

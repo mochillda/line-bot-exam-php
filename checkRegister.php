@@ -53,24 +53,6 @@ function processMessage($update) {
 function sendMessage($parameters) {
     echo json_encode($parameters);
 }
-
-function sendPostYes($parameters) {
-         sendMessage(array(
-            "source" => $update["responseId"],
-            "fulfillmentText"=>$update['queryResult']['parameters']['codeId'],
-            "payload" => array(
-                "items"=>[
-                    array(
-                        "simpleResponse"=>
-                    array(
-                        "textToSpeech"=>"response from host"
-                         )
-                    )
-                ],
-                ),
-           
-        ));
-}
  
 $update_response = file_get_contents("php://input");
 $update = json_decode($update_response, true);

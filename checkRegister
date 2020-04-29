@@ -4,7 +4,7 @@
 function processMessage($update) {
 //     if($update["queryResult"]["queryText"] != "ใช่"){
        if (isset($update["queryResult"]["queryText"])) {
-          if($update["queryResult"]["queryText"] == "ใช่"){
+          if($update["queryResult"]["queryText"] == "ลงทะเบียน / ข้อมูลการลงทะเบียน"){
                sendMessage(array(
                    "source" => $update["responseId"],
                    "fulfillmentText"=> 'ข้อความที่จะตอบกลับแบบปกติ',

@@ -1,12 +1,12 @@
 <?php
 
- function processMessage($update) {
+  function processMessage($update) {
        if (isset($update["queryResult"]["queryText"])) {
           if($update["queryResult"]["queryText"] == "ลงทะเบียน / ข้อมูลการลงทะเบียน"){
-               sendMessage(array(
+               $this->sendMessage(array(
                    "source" => $update["responseId"],
                    "fulfillmentText"=> 'ข้อความที่จะตอบกลับแบบปกติ',
-                   "fulfillmentMessages"=> [
+                   "fulfillmentMessages"=> (
                          array(
                            "platform"=> 'line',
                            "type"=> 'buttons',
@@ -17,71 +17,70 @@
                                        )
                             )
                          )
-                       ],
+                       ),
                        "payload" => array(
-                              "items"=>[
+                              "items"=>(
                                   array(
                                       "simpleResponse"=>
                                          array(
                                              "textToSpeech"=>"response from host"
                                               )
                                   )
-                              ],
+                              ),
                        ),
                ));
           }
         }else{
-            sendMessage(array(
+            $this->sendMessage(array(
                 "source" => $update["responseId"],
                 "fulfillmentText"=> "Error",
                 "payload" => array(
-                    "items"=>[
+                    "items"=>(
                         array(
                             "simpleResponse"=>
                         array(
                             "textToSpeech"=>"Bad request"
                              )
                         )
-                    ],
+                    ),
                     ),
                
             ));
             
         }
     }
-       
-
-
-        $update_response = file_get_contents("php://input");
+ 
+    function webhook(){ 
+        $update_response = file_get_contents('php://input');
         $update = json_decode($update_response, true);
 
         if (isset($update["queryResult"]["queryText"])) {
-            processMessage($update);
+            $this->processMessage($update);
             $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
             fwrite($myfile, $update["queryResult"]["queryText"]);
             fclose($myfile);
         }else{
-            sendMessage(array(
+            $this->sendMessage(array(
                     "source" => $update["responseId"],
                     "fulfillmentText"=> $update["queryResult"]["queryText"],
                     "payload" => array(
-                        "items"=>[
+                        "items"=>(
                             array(
                                 "simpleResponse"=>
                             array(
                                 "textToSpeech"=>"Bad request"
                                  )
                             )
-                        ],
+                        ),
                         ),
                 ));
         }
-    
+    }
 
-
-    function sendMessage($parameters) {
+  function sendMessage($parameters = array()) {
         echo json_encode($parameters);
-    } 
+    }   
+
   
 
 

@@ -50,7 +50,7 @@
         }
     }
  
-    function webhook(){ 
+//     function webhook(){ 
         $update_response = file_get_contents('php://input');
         $update = json_decode($update_response, true);
 
@@ -75,7 +75,7 @@
                         ),
                 ));
         }
-    }
+//     }
 
   function sendMessage($parameters = array()) {
         echo json_encode($parameters);

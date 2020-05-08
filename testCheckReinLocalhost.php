@@ -77,7 +77,7 @@
         }
 //     }
 
-  function sendMessage($parameters = array()) {
+  function sendMessage($parameters) {
         echo json_encode($parameters);
     }   
 

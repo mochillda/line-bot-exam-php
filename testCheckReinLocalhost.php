@@ -51,7 +51,7 @@
     }
  
 //     function webhook(){ 
-        $update_response = file_get_contents('php://input');
+        $update_response = file_get_contents("php://input");
         $update = json_decode($update_response, true);
 
         if (isset($update["queryResult"]["queryText"])) {

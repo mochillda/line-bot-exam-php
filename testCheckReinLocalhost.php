@@ -19,7 +19,7 @@
                          )
                        ),
                        "payload" => array(
-                              "items"=>(
+                              "items"=>[
                                   array(
                                       "simpleResponse"=>
                                          array(

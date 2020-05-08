@@ -17,7 +17,7 @@
                                        )
                             )
                          )
-                       ),
+                       ],
                        "payload" => array(
                               "items"=>[
                                   array(

@@ -2,8 +2,9 @@
 
         header("Content-type:application/json; charset=UTF-8");
 
-        require "system/libraries/vendor/autoload.php";
-        require_once('system/libraries/vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
+        require "vendor/autoload.php";
+        require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
+
 
         $access_token = 'lMGsbFR4DBpd5t5u7AL31RqMxqM/tEe02YYOcf1TXOD1mprdXoPtkyRKbs+Q3APyFZVDLGZmxYXyZD7T1tvt0ztKmVRR73ngC3zduOM+r3qDohGFuNa5tV0aKp9M3GMFaPU3XEjPikIDPch8QLU0/QdB04t89/1O/w1cDnyilFU=';
 

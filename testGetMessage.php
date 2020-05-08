@@ -1,5 +1,5 @@
 <?php
-
+ public function getMessage(){
         header("Content-type:application/json; charset=UTF-8");
 
         require "vendor/autoload.php";
@@ -85,6 +85,6 @@
         }else{
             echo "FALSE";
         }
-
+ }
     
 ?>

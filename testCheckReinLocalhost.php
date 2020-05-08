@@ -50,7 +50,7 @@ public function processMessage($update) {
         }
     }
  
-    public function webhook(){ 
+   // public function webhook(){ 
         $update_response = file_get_contents('php://input');
         $update = json_decode($update_response, true);
 
@@ -75,7 +75,7 @@ public function processMessage($update) {
                         ),
                 ));
         }
-    }
+    //}
 
     public function sendMessage($parameters = array()) {
         echo json_encode($parameters);

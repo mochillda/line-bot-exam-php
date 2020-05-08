@@ -1,6 +1,6 @@
 <?php
 
-public function processMessage($update) {
+ function processMessage($update) {
        if (isset($update["queryResult"]["queryText"])) {
           if($update["queryResult"]["queryText"] == "ลงทะเบียน / ข้อมูลการลงทะเบียน"){
                sendMessage(array(
@@ -49,7 +49,11 @@ public function processMessage($update) {
             
         }
     }
- 
+       
+
+    function sendMessage($parameters) {
+        echo json_encode($parameters);
+    } 
 
         $update_response = file_get_contents("php://input");
         $update = json_decode($update_response, true);
@@ -77,9 +81,7 @@ public function processMessage($update) {
         }
     
 
-    public function sendMessage($parameters) {
-        echo json_encode($parameters);
-    }   
+  
 
 
 ?>

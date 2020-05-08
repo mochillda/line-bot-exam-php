@@ -1,6 +1,5 @@
 <?php
 
-public function getMessage(){
         header("Content-type:application/json; charset=UTF-8");
 
         require "system/libraries/vendor/autoload.php";
@@ -85,26 +84,6 @@ public function getMessage(){
         }else{
             echo "FALSE";
         }
-        // $datas = file_get_contents('php://input');
-        
-        // $deCode = json_decode($datas,true);
-        
-        // file_put_contents('line_log.txt', file_get_contents('php://input') . PHP_EOL, FILE_APPEND);
-        
-        // $replyToken = $deCode['events'][0]['replyToken'];
-        
-        // $messages = array();
-        // $messages['replyToken']  = $replyToken;
-        // $messages['messages'][0] = $this->getFormatTextMessage("message");
-        
-        // $encodeJson = json_encode($messages);
-        
-        // $LINEDatas['url'] = "https://api.line.me/v2/bot/message/reply";
-        // $LINEDatas['token'] = "";
-        
-        // $results = $this->sentMessage($encodeJson,$LINEDatas);
-        // /*Return HTTP Request 200*/
-        // return http_response_code(200);        
-    }
+
     
 ?>

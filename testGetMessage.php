@@ -1,5 +1,5 @@
 <?php
-  public function getMessage(){
+  function getMessage(){
      echo 'wow';
   }
     

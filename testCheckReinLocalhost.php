@@ -3,10 +3,10 @@
   function processMessage($update) {
        if (isset($update["queryResult"]["queryText"])) {
           if($update["queryResult"]["queryText"] == "ลงทะเบียน / ข้อมูลการลงทะเบียน"){
-               $this->sendMessage(array(
+               sendMessage(array(
                    "source" => $update["responseId"],
                    "fulfillmentText"=> 'ข้อความที่จะตอบกลับแบบปกติ',
-                   "fulfillmentMessages"=> (
+                   "fulfillmentMessages"=> [
                          array(
                            "platform"=> 'line',
                            "type"=> 'buttons',
@@ -26,23 +26,23 @@
                                              "textToSpeech"=>"response from host"
                                               )
                                   )
-                              ),
+                              ],
                        ),
                ));
           }
         }else{
-            $this->sendMessage(array(
+            sendMessage(array(
                 "source" => $update["responseId"],
                 "fulfillmentText"=> "Error",
                 "payload" => array(
-                    "items"=>(
+                    "items"=>[
                         array(
                             "simpleResponse"=>
                         array(
                             "textToSpeech"=>"Bad request"
                              )
                         )
-                    ),
+                    ],
                     ),
                
             ));
@@ -55,23 +55,23 @@
         $update = json_decode($update_response, true);
 
         if (isset($update["queryResult"]["queryText"])) {
-            $this->processMessage($update);
+            processMessage($update);
             $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
             fwrite($myfile, $update["queryResult"]["queryText"]);
             fclose($myfile);
         }else{
-            $this->sendMessage(array(
+            sendMessage(array(
                     "source" => $update["responseId"],
                     "fulfillmentText"=> $update["queryResult"]["queryText"],
                     "payload" => array(
-                        "items"=>(
+                        "items"=>[
                             array(
                                 "simpleResponse"=>
                             array(
                                 "textToSpeech"=>"Bad request"
                                  )
                             )
-                        ),
+                        ],
                         ),
                 ));
         }

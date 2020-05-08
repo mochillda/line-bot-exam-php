@@ -51,9 +51,6 @@
     }
        
 
-    function sendMessage($parameters) {
-        echo json_encode($parameters);
-    } 
 
         $update_response = file_get_contents("php://input");
         $update = json_decode($update_response, true);
@@ -81,6 +78,10 @@
         }
     
 
+
+    function sendMessage($parameters) {
+        echo json_encode($parameters);
+    } 
   
 
 

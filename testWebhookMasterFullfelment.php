@@ -11,7 +11,7 @@ $event = json_decode($content, true);
 		if ($event['queryResult']['queryText'] == 'ลงทะเบียน / ข้อมูลการลงทะเบียน') {
 
 			$userId = $event['originalDetectIntentRequest']['payload']['data']['source']['userId'];
-			$text = $event['originalDetectIntentRequest']['payload']['data']['source']['userId'];
+			$text = 'ddddd';
 
 			$replyToken = $event['originalDetectIntentRequest']['payload']['data']["replyToken"];
 

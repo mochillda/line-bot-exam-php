@@ -43,8 +43,8 @@ $access_token = 'lMGsbFR4DBpd5t5u7AL31RqMxqM/tEe02YYOcf1TXOD1mprdXoPtkyRKbs+Q3AP
 			
 			$result = curl_exec($ch);
 			curl_close($ch);
-
-                    	$datasReturn = array();
+	echo $result . "\r\n";
+//                     	$datasReturn = array();
 			   
                     
                 }else{

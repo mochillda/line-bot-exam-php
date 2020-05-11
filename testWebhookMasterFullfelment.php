@@ -34,20 +34,30 @@ $access_token = 'lMGsbFR4DBpd5t5u7AL31RqMxqM/tEe02YYOcf1TXOD1mprdXoPtkyRKbs+Q3AP
                                     ,"cache-control: no-cache"
                                     , 'Authorization: Bearer ' . $access_token);
                     
-                    $ch = curl_init();
+//                     $ch = curl_init();
                    //curl_setopt($ch, CURLOPT_PROXY, PROXY);
-                    curl_setopt($ch, CURLOPT_URL, $url);
-                    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                    curl_setopt($ch, CURLOPT_POSTFIELDS, $encodeJson);
-                    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-                    curl_setopt($ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
-                    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-                    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+//                     curl_setopt($ch, CURLOPT_URL, $url);
+//                     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+//                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+//                     curl_setopt($ch, CURLOPT_POSTFIELDS, $encodeJson);
+//                     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+//                     curl_setopt($ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
+//                     curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+//                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
                     
-                    $result = curl_exec($ch);
-                    $err = curl_error($ch);
-                    curl_close($ch);
+//                     $result = curl_exec($ch);
+//                     $err = curl_error($ch);
+//                     curl_close($ch);
+			
+			
+		        $ch = curl_init($url);
+			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			$result = curl_exec($ch);
+			curl_close($ch);
 
                     $datasReturn = array();
 			    if ($err) {

@@ -2,16 +2,13 @@
 
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
-echo 'dddd';
 $access_token = 'lMGsbFR4DBpd5t5u7AL31RqMxqM/tEe02YYOcf1TXOD1mprdXoPtkyRKbs+Q3APyFZVDLGZmxYXyZD7T1tvt0ztKmVRR73ngC3zduOM+r3qDohGFuNa5tV0aKp9M3GMFaPU3XEjPikIDPch8QLU0/QdB04t89/1O/w1cDnyilFU=';
 
  $content = file_get_contents('php://input');
         // Parse JSON
         $event = json_decode($content, true);
-echo $event["responseId"];
 
                 if ($event["queryResult"]["queryText"] == 'ลงทะเบียน / ข้อมูลการลงทะเบียน') {
-echo $event["queryResult"]["queryText"];
                     $userId = $event['originalDetectIntentRequest']['payload']['data']['source']['userId'];
                     $text   = $event['originalDetectIntentRequest']['payload']['data']['source']['userId'];
                     //$text = $event['source']['userId'];
@@ -57,10 +54,12 @@ echo $event["queryResult"]["queryText"];
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			
+			$err = curl_error($ch);
 			$result = curl_exec($ch);
 			curl_close($ch);
 
-                    $datasReturn = array();
+                    	$datasReturn = array();
 			    if ($err) {
 				$datasReturn['result'] = 'E';
 				$datasReturn['message'] = $err;

@@ -13,7 +13,7 @@ if ($event["queryResult"]["queryText"] == 'ลงทะเบียน / ข้�
 	    $text   = $event['originalDetectIntentRequest']['payload']['data']['source']['userId'];
 
 	     $replyToken = $event["responseId"];
-	   echo $replyToken;
+	   	echo $replyToken;
              // Build message to reply back
 //              $datas = array();
 //              $datas['type'] = 'text';
@@ -51,10 +51,31 @@ if ($event["queryResult"]["queryText"] == 'ลงทะเบียน / ข้�
 			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			
-			$result = curl_exec($ch);
-			curl_close($ch);
-			echo $result . "\r\n";
-//                     	$datasReturn = array();
+		    $result = curl_exec($ch);
+                    $err = curl_error($ch);
+                    curl_close($ch);
+
+
+                    if ($err) {
+			$datasReturn = [
+				'result' => 'E',
+				'message' => $err
+			];
+                    } else {
+                        if($result == "{}"){
+			$datasReturn = [
+				'result' => 'S',
+				'message' => 'Success'
+			];
+                        }else{
+			$datasReturn = [
+				'result' => 'E',
+				'message' => '$result'
+			];
+                        }
+                    }
+                    
+                    print_r($datasReturn);
 			   
                     
                 }else{

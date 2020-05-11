@@ -13,6 +13,7 @@ if ($event["queryResult"]["queryText"] == 'ลงทะเบียน / ข้�
 	    $text   = $event['originalDetectIntentRequest']['payload']['data']['source']['userId'];
 
 	     $replyToken = $event["responseId"];
+	   echo $replyToken;
              // Build message to reply back
 //              $datas = array();
 //              $datas['type'] = 'text';

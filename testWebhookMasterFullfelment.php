@@ -35,7 +35,7 @@ $access_token = 'lMGsbFR4DBpd5t5u7AL31RqMxqM/tEe02YYOcf1TXOD1mprdXoPtkyRKbs+Q3AP
                                     , 'Authorization: Bearer ' . $access_token);
                     
                     $ch = curl_init();
-                    curl_setopt($ch, CURLOPT_PROXY, PROXY);
+                   //curl_setopt($ch, CURLOPT_PROXY, PROXY);
                     curl_setopt($ch, CURLOPT_URL, $url);
                     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

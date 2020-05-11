@@ -11,13 +11,13 @@ $event = json_decode($content, true);
 		if ($event['queryResult']['queryText'] == 'ลงทะเบียน / ข้อมูลการลงทะเบียน') {
 
 			$userId = $event['originalDetectIntentRequest']['payload']['data']['source']['userId'];
-			$text = 'ddddd';
+			$text = $event['originalDetectIntentRequest']['payload']['data']['source']['userId'];
 
 			$replyToken = $event['originalDetectIntentRequest']['payload']['data']["replyToken"];
 
 			$messages = [
 				'type' => 'text',
-				'text' => 'ddddd'
+				'text' => $userId
 			];
 
 			// Make a POST Request to Messaging API to reply to sender

@@ -11,7 +11,7 @@ $access_token = 'lMGsbFR4DBpd5t5u7AL31RqMxqM/tEe02YYOcf1TXOD1mprdXoPtkyRKbs+Q3AP
 echo $event["responseId"];
 
                 if ($event["queryResult"]["queryText"] == 'ลงทะเบียน / ข้อมูลการลงทะเบียน') {
-
+echo $event["queryResult"]["queryText"];
                     $userId = $event['originalDetectIntentRequest']['payload']['data']['source']['userId'];
                     $text   = $event['originalDetectIntentRequest']['payload']['data']['source']['userId'];
                     //$text = $event['source']['userId'];

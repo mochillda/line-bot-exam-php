@@ -17,7 +17,7 @@ $event = json_decode($content, true);
 
 			$messages = [
 				'type' => 'text',
-				'text' => $userId
+				'text' => '999999'//$userId
 			];
 
 			// Make a POST Request to Messaging API to reply to sender

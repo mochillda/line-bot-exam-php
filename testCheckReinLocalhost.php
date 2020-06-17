@@ -13,7 +13,8 @@
                            "payload"=> array(
                                           "line"=> array(
                                           "type"=> "text",
-                                          "text"=> $update['originalDetectIntentRequest']['payload']['data']['source']['userId']  
+                                          "text"=> $update['originalDetectIntentRequest']['payload']['data'] 
+                                            // $update['originalDetectIntentRequest']['payload']['data']['source']['userId'] 
                                        )
                             )
                          )

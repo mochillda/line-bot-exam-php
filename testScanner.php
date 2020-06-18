@@ -14,7 +14,7 @@
 </body>
 </html>
 
-<!--   <script src="https://static.line-scdn.net/liff/edge/2.1/liff.js"></script> -->
+  <script src="https://static.line-scdn.net/liff/edge/2.1/liff.js"></script>
   <script>
     function scanCode() {
 //       alert('dddddd');

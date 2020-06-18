@@ -1,16 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
- 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My LIFF App</title>
 </head>
 <body>
-   <div class="container">
-        <button type="button" class="btn btn-success" onclick="liff.scanCode()">สแกน</button>
-  </div>
+  <p id="scanCode"></p>
+  <p>
+    <button id="btnScanCode" onclick="scanCode();">Scan Code</button>
+  </p>
+  <script src="https://static.line-scdn.net/liff/edge/2.1/liff.js"></script>
+  <script>
+    function scanCode() {
+      liff.scanCode().then(result => {
+        const stringifiedResult = JSON.stringify(result);
+        alert(stringifiedResult);
+        document.getElementById("scanCode").textContent = stringifiedResult;
+      });
+    }
+    liff.init({ liffId: "your-liff-id" }, () => {}, err => console.error(err.code, error.message));
+  </script>
 </body>
 </html>
-

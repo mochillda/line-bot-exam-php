@@ -115,7 +115,8 @@
 							</div>
 						</div> -->
 							<div class="d-flex justify-content-center mt-3 login_container">
-				 	<button type="button" name="button" class="btn login_btn">Login</button>
+				 	<button type="button" name="button" class="btn login_btn" onclick="coupon()">Login</button>
+								
 				   </div>
 					</form>
 				</div>
@@ -133,3 +134,40 @@
 	</div>
 </body>
 </html>
+
+
+  <script>
+    
+<!--      function scanCode() {
+      liff.scanCode().then(result => {
+        const stringifiedResult = JSON.stringify(result);
+        alert(stringifiedResult);
+        document.getElementById("scanCode").textContent = stringifiedResult;
+      });
+    } -->
+    
+    function coupon() {
+      liff.getProfile().then(function (profile) {
+            liff.sendMessages([
+//                   {
+//                     type: 'image',
+//                     originalContentUrl: 'https://' + document.domain + '/imgs/' + res + '.jpg',
+//                     previewImageUrl: 'https://' + document.domain + '/imgs/' + res + '_240.jpg'
+//                   },
+                  {
+                    type: 'text',
+                    text: 'From:' + profile.displayName
+                  }
+            ]).then(function () {
+                liff.closeWindow();
+            }).catch(function (error) {
+                 window.alert('Error sending message: ' + error.message);
+            });
+       }).catch(function (error) {
+            window.alert("Error getting profile: " + error.message);
+       });
+        //}
+    	 
+  }
+  liff.init({ liffId: "1653870917-7bBqe2GM" }, () => {}, err => console.error(err.code, error.message));
+  </script>

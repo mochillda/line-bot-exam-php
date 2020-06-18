@@ -158,7 +158,7 @@
 //                   },
                   {
                     type: 'text',
-                    text: 'From:' + profile.displayName
+                    text: 'From:' + profile.picture
                   }
             ]).then(function () {
                 liff.closeWindow();

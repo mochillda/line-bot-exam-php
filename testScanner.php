@@ -11,7 +11,7 @@
 <body>
   <p id="scanCode"></p>
   <p>
-    <button type="button" class="btn btn-success" onclick="coupon();">ออก</button>
+    <button type="button" class="btn btn-success" onclick="coupon()">ออก</button>
   </p>
 
 </body>

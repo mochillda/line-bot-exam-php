@@ -39,9 +39,9 @@
        }).catch(function (error) {
             window.alert("Error getting profile: " + error.message);
        });
-//         }
+        //}
     	 
-    }
-    liff.init({ liffId: "1653870917-7bBqe2GM" }, () => {}, err => console.error(err.code, error.message));
+  }
+  liff.init({ liffId: "1653870917-7bBqe2GM" }, () => {}, err => console.error(err.code, error.message));
 
   </script>

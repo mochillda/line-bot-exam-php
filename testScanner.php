@@ -1,4 +1,4 @@
-  <script src="https://static.line-scdn.net/liff/edge/2.1/liff.js"></script>
+ <script src="https://static.line-scdn.net/liff/edge/2.1/liff.js"></script>
 <html>
 <head>
   <meta charset="UTF-8" />
@@ -8,7 +8,7 @@
 <body>
   <p id="scanCode"></p>
   <p>
-    <button id="btn" onclick="coupon();">coupon</button>
+    <button id="btn" onclick="coupon();">couponS</button>
   </p>
 
 </body>
@@ -17,7 +17,7 @@
 
   <script>
     function coupon() {
-	    alert('ddddd');
+	   liff.closeWindow();
     }
 //   function initializeApp(data) {
 //       let urlParams = new URLSearchParams(window.location.search);

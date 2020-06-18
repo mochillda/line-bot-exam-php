@@ -20,8 +20,8 @@
 
   <script>
     function coupon() {
-	    alert('ddd')
-// 	   liff.closeWindow();
+// 	    alert('ddd')
+	   liff.closeWindow();
     }
 //     function scanCode() {
 //     	  liff.sendMessages([

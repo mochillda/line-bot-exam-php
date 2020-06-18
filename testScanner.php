@@ -1,4 +1,4 @@
-
+  <script src="https://static.line-scdn.net/liff/edge/2.1/liff.js"></script>
 <html>
 <head>
   <meta charset="UTF-8" />
@@ -8,13 +8,13 @@
 <body>
   <p id="scanCode"></p>
   <p>
-    <button id="btnScanCode" onclick="scanCode();">Scan Code</button>
+    <button id="btnScanCode" onclick="liff.closeWindow();">Scan Code</button>
   </p>
 
 </body>
 </html>
 
-  <script src="https://static.line-scdn.net/liff/edge/2.1/liff.js"></script>
+
   <script>
     
     function scanCode() {

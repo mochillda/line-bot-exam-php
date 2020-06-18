@@ -24,5 +24,5 @@
         document.getElementById("scanCode").textContent = stringifiedResult;
       });
     }
-    liff.init({ liffId: "your-liff-id" }, () => {}, err => console.error(err.code, error.message));
+    liff.init({ liffId: "https://liff.line.me/1653870917-7bBqe2GM" }, () => {}, err => console.error(err.code, error.message));
   </script>

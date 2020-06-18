@@ -17,12 +17,17 @@
 
   <script>
     
-    function scanCode() {
-     
 
-	  
-		liff.closeWindow();
-	 
-    }
+  function initializeApp(data) {
+      let urlParams = new URLSearchParams(window.location.search);
+	alert(data.context.userId));
+  }
+
+
+  $(function () {
+        liff.init(function (data) {
+          initializeApp(data);
+        });
+  });
 
   </script>

@@ -1,4 +1,5 @@
- <script src="https://static.line-scdn.net/liff/edge/2.1/liff.js"></script>
+
+<script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
 <html>
 <head>
   <meta charset="UTF-8" />

@@ -10,7 +10,11 @@
   <p>
     <button id="btnScanCode" onclick="scanCode();">Scan Code</button>
   </p>
-  <script src="https://static.line-scdn.net/liff/edge/2.1/liff.js"></script>
+
+</body>
+</html>
+
+<!--   <script src="https://static.line-scdn.net/liff/edge/2.1/liff.js"></script> -->
   <script>
     function scanCode() {
       alert('dddddd');
@@ -20,7 +24,5 @@
 //         document.getElementById("scanCode").textContent = stringifiedResult;
 //       });
     }
-    liff.init({ liffId: "your-liff-id" }, () => {}, err => console.error(err.code, error.message));
+//     liff.init({ liffId: "your-liff-id" }, () => {}, err => console.error(err.code, error.message));
   </script>
-</body>
-</html>

@@ -91,7 +91,7 @@
 			<div class="user_card">
 				<div class="d-flex justify-content-center">
 					<div class="brand_logo_container">
-						<img src="https://c7.uihere.com/files/923/473/200/recycling-symbol-logo-clip-art-recycle.jpg" class="brand_logo" alt="Logo">
+						<img src="http://clipart-library.com/images/8TxKydpGc.jpg" class="brand_logo" alt="Logo">
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">

@@ -117,6 +117,7 @@
 						</div> -->
 							<div class="d-flex justify-content-center mt-3 login_container">
 				 	<button type="button" name="button" class="btn login_btn" onclick="coupon()">Login</button>
+					 <button type="button" class="btn btn-success" onclick="coupon()">send massaage</button>
 								
 				   </div>
 					</form>
@@ -137,15 +138,15 @@
 </html>
 
 
-  <script>
+ <script>
     
-<!--      function scanCode() {
+     function scanCode() {
       liff.scanCode().then(result => {
         const stringifiedResult = JSON.stringify(result);
         alert(stringifiedResult);
         document.getElementById("scanCode").textContent = stringifiedResult;
       });
-    } -->
+    }
     
     function coupon() {
       liff.getProfile().then(function (profile) {
@@ -157,7 +158,7 @@
 //                   },
                   {
                     type: 'text',
-                    text: 'From:' + profile.displayName
+                    text: 'From:' //+ profile.displayName
                   }
             ]).then(function () {
                 liff.closeWindow();

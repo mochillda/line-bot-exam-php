@@ -11,7 +11,8 @@
 <body>
   <p id="scanCode"></p>
   <p>
-    <button type="button" class="btn btn-success" onclick="coupon()">ออกddd</button>
+    <button type="button" class="btn btn-success" onclick="coupon()">send massaage</button>
+    <button id="btnScanCode" onclick="scanCode();">Scan Code</button>
   </p>
 
 </body>
@@ -19,6 +20,15 @@
 
 
   <script>
+    
+     function scanCode() {
+      liff.scanCode().then(result => {
+        const stringifiedResult = JSON.stringify(result);
+        alert(stringifiedResult);
+        document.getElementById("scanCode").textContent = stringifiedResult;
+      });
+    }
+    
     function coupon() {
       liff.getProfile().then(function (profile) {
             liff.sendMessages([

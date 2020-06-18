@@ -8,7 +8,7 @@
 <body>
   <p id="scanCode"></p>
   <p>
-    <button id="btn" onclick="liff.closeWindow()">couponSsssd</button>
+    <button type="button" class="btn btn-success" onclick="liff.closeWindow()">ออก</button>
   </p>
 
 </body>

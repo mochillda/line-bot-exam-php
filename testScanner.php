@@ -11,7 +11,7 @@
 <body>
   <p id="scanCode"></p>
   <p>
-    <button type="button" class="btn btn-success" onclick="coupon()">ออก</button>
+    <button type="button" class="btn btn-success" onclick="coupon()">ออกddd</button>
   </p>
 
 </body>
@@ -20,8 +20,19 @@
 
   <script>
     function coupon() {
-// 	    alert('ddd')
-	   liff.closeWindow();
+    	  liff.sendMessages([
+        {
+          type: 'text',
+          text: 'From:' + profile.displayName
+        }
+        ]).then(function () {
+        liff.closeWindow();
+        }).catch(function (error) {
+        window.alert('Error sending message: ' + error.message);
+        });
+      }).catch(function (error) {
+        window.alert("Error getting profile: " + error.message);
+      });
     }
 //     function scanCode() {
 //     	  liff.sendMessages([

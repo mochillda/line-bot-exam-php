@@ -22,24 +22,24 @@
     function coupon() {
       liff.getProfile().then(function (profile) {
             liff.sendMessages([
-            {
-              type: 'image',
-              originalContentUrl: 'https://' + document.domain + '/imgs/' + res + '.jpg',
-              previewImageUrl: 'https://' + document.domain + '/imgs/' + res + '_240.jpg'
-            },
-            {
-              type: 'text',
-              text: 'From:' + profile.displayName
-            }
+                  {
+                    type: 'image',
+                    originalContentUrl: 'https://' + document.domain + '/imgs/' + res + '.jpg',
+                    previewImageUrl: 'https://' + document.domain + '/imgs/' + res + '_240.jpg'
+                  },
+                  {
+                    type: 'text',
+                    text: 'From:' + profile.displayName
+                  }
             ]).then(function () {
-            liff.closeWindow();
+                liff.closeWindow();
             }).catch(function (error) {
-            window.alert('Error sending message: ' + error.message);
+                 window.alert('Error sending message: ' + error.message);
             });
-          }).catch(function (error) {
+       }).catch(function (error) {
             window.alert("Error getting profile: " + error.message);
-          });
-        }
+       });
+//         }
     	 
     }
     liff.init({ liffId: "1653870917-7bBqe2GM" }, () => {}, err => console.error(err.code, error.message));

@@ -37,7 +37,7 @@
 //       }).catch(function (error) {
 //         window.alert("Error getting profile: " + error.message);
 //       });
-    }
+//     }
 //     function scanCode() {
 // //       alert('dddddd');
 //       liff.scanCode().then(result => {

@@ -8,7 +8,7 @@
 <body>
   <p id="scanCode"></p>
   <p>
-    <button id="btnScanCode" onclick="liff.closeWindow();">Scan Code</button>
+    <button id="btn" onclick="coupon();">coupon</button>
   </p>
 
 </body>
@@ -16,19 +16,20 @@
 
 
   <script>
-    
-
+    function coupon() {
+	    alert('ddddd');
+    }
 //   function initializeApp(data) {
 //       let urlParams = new URLSearchParams(window.location.search);
 // 	alert(data.context.userId));
 //   }
 
 
-  $(function () {
-	  alert('ddddd');
+//   $(function () {
+// 	  alert('ddddd');
 //         liff.init(function (data) {
 //           initializeApp(data);
 //         });
-  });
+//   });
 
   </script>

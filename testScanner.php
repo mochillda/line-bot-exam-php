@@ -10,7 +10,7 @@
   <p>
     <button id="btnScanCode" onclick="scanCode();">Scan Code</button>
   </p>
-  <script src="https://static.line-scdn.net/liff/edge/2.1/liff.js"></script>
+<!--   <script src="https://static.line-scdn.net/liff/edge/2.1/liff.js"></script>
   <script>
     function scanCode() {
       liff.scanCode().then(result => {
@@ -20,6 +20,6 @@
       });
     }
     liff.init({ liffId: "your-liff-id" }, () => {}, err => console.error(err.code, error.message));
-  </script>
+  </script> -->
 </body>
 </html>

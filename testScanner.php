@@ -18,16 +18,17 @@
   <script>
     
 
-  function initializeApp(data) {
-      let urlParams = new URLSearchParams(window.location.search);
-	alert(data.context.userId));
-  }
+//   function initializeApp(data) {
+//       let urlParams = new URLSearchParams(window.location.search);
+// 	alert(data.context.userId));
+//   }
 
 
   $(function () {
-        liff.init(function (data) {
-          initializeApp(data);
-        });
+	  alert('ddddd');
+//         liff.init(function (data) {
+//           initializeApp(data);
+//         });
   });
 
   </script>

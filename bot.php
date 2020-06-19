@@ -12,12 +12,12 @@ function processMessage($update) {
                          array(
                            "platform"=> 'line',
                            "type"=> 4,
-                           "payload"=> array(
-                                          "line"=> array(
-                                          "type"=> "text",
-                                          "text"=> $update['queryResult']['parameters']['codeId']."ลงทะเบียนสำเร็จ"//"ลงทะเบียนสำเร็จ"
-                                          )
-                                       )
+//                            "payload"=> array(
+//                                           "line"=> array(
+//                                           "type"=> "text",
+//                                           "text"=> $update['queryResult']['parameters']['codeId']."ลงทะเบียนสำเร็จ"//"ลงทะเบียนสำเร็จ"
+//                                           )
+//                                        )
                          )
                        ],
                    "payload" => array(

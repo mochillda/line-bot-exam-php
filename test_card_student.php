@@ -37,7 +37,7 @@ function processMessage($update) {
             ),
             array(
               "type"=> "image",
-              "url"=> "https://www.thairath.co.th/media/4DQpjUtzLUwmJZZGVmOVSmgAh3WC0W78Wpju2Ioyft3k.webp",
+              "url"=> "https://campus.campus-star.com/app/uploads/2016/05/%E0%B8%9D%E0%B8%99-%E0%B8%A8%E0%B8%99%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B8%89%E0%B8%B1%E0%B8%95%E0%B8%A3-%E0%B9%83%E0%B8%99%E0%B8%8A%E0%B8%B8%E0%B8%94%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2-%E0%B8%81%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%88%E0%B8%9A%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%9A%E0%B8%B1%E0%B8%93%E0%B8%91%E0%B8%B4%E0%B8%95%E0%B9%80%E0%B8%95%E0%B9%87%E0%B8%A1%E0%B8%95%E0%B8%B1%E0%B8%A7-1.jpg",
 //               "flex"=> 6,
               "align"=> "end",
               "gravity"=> "center",

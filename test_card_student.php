@@ -48,6 +48,16 @@ function processMessage($update) {
                                              "text"=> "Body",
                                              "size"=> "xxl",
                                              "align"=> "center"
+                                           ),
+                                            array(
+                                             "type"=> "text",
+                                             "text"=> "ssssssssssssssssssText",
+                                             "flex"=> 6,
+                                             "margin"=> "md",
+                                             "size"=> "lg",
+                                             "align"=> "center",
+                                             "weight"=> "bold",
+                                             "wrap"=> true
                                            )
                                          ]
                                        ),

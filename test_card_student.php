@@ -54,10 +54,10 @@ function processMessage($update) {
                                              "text"=> "ssssssssssssssssssText",
 //                                              "flex"=> 6,
                                              "margin"=> "md",
-                                             "size"=> "lg"
-//                                              "align"=> "center",
-//                                              "weight"=> "bold",
-//                                              "wrap"=> true
+                                             "size"=> "lg",
+                                             "align"=> "center",
+                                             "weight"=> "bold",
+                                             "wrap"=> true
                                            )
                                          ]
                                        ),

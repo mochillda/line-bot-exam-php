@@ -4,7 +4,7 @@
 function processMessage($update) {
 //     if($update["queryResult"]["queryText"] != "ใช่"){
        if (isset($update["queryResult"]["queryText"])) {
-          if($update["queryResult"]["queryText"] == "ใช่"){
+          if($update["queryResult"]["queryText"] == "card"){
                sendMessage(array(
                    "source" => $update["responseId"],
                    "fulfillmentText"=> 'ข้อความที่จะตอบกลับแบบปกติ',
@@ -12,12 +12,143 @@ function processMessage($update) {
                          array(
                            "platform"=> 'line',
                            "type"=> 4,
-//                            "payload"=> array(
-//                                           "line"=> array(
-//                                           "type"=> "text",
-//                                           "text"=> $update['queryResult']['parameters']['codeId']."ลงทะเบียนสำเร็จ"//"ลงทะเบียนสำเร็จ"
-//                                           )
-//                                        )
+                           "payload"=> array(
+                                          "line"=> array(
+                                                   "type"=> "flex",
+                                                   "altText"=> "Flex Message",
+                                                   "contents"=> array(
+                                                     "type"=> "bubble",
+                                                     "body"=> array(
+                                                       "type"=> "box",
+                                                       "layout"=> "vertical",
+                                                       "contents"=> [
+                                                         array(
+                                                           "type"=> "box",
+                                                           "layout"=>"horizontal",
+                                                           "contents"=> [
+                                                              array(
+                                                               "type"=> "image",
+                                                               "url"=> "https://www.pim.ac.th/uploads/content/2015/10/o_1a21hj8a0g3h16gbh3kj1pqaja.png",
+                                                               "flex"=> 5,
+                                                               "align"=> "start"
+                                                             ),
+                                                              array(
+                                                               "type"=> "image",
+                                                               "url"=>"https://www.thairath.co.th/media/4DQpjUtzLUwmJZZGVmOVSmgAh3WC0W78Wpju2Ioyft3k.webp",
+                                                               "flex"=> 6,
+                                                               "align"=> "end",
+                                                               "gravity"=> "center",
+                                                               "size"=> "full",
+                                                               "aspectRatio"=> "4:3",
+                                                               "aspectMode"=> "fit"
+                                                             )
+                                                           ]
+                                                         ),
+                                                          array(
+                                                           "type"=> "text",
+                                                           "text"=> "นางสาว พราวฤดี จันทร์โอสถ",
+                                                           "margin"=> "xl",
+                                                           "size"=> "sm",
+                                                           "align"=> "start",
+                                                           "weight"=> "bold"
+                                                         ),
+                                                          array(
+                                                           "type"=> "text",
+                                                           "text"=>"PRAOREUDEE JANOSOTH",
+                                                           "size"=> "xxs"
+                                                         ),
+                                                          array(
+                                                           "type"=> "text",
+                                                           "text"=> "คณะวิทยาการจัดการ สาขาการจัดการธุรกิจการบิน",
+                                                           "size"=> "xxs",
+                                                           "align"=> "start"
+                                                         ),
+                                                          array(
+                                                           "type"=> "text",
+                                                           "text"=> "管理科學學院 航空業務管理處",
+                                                           "flex"=> 5,
+                                                           "size"=> "xxs",
+                                                           "color"=> "#666666",
+                                                           "wrap"=> true
+                                                         ),
+                                                          array(
+                                                           "type"=> "box",
+                                                           "layout"=> "horizontal",
+                                                           "contents"=>[
+                                                              array(
+                                                               "type"=> "box",
+                                                               "layout"=> "vertical",
+                                                               "spacing"=>"sm",
+                                                               "margin"=> "lg",
+                                                               "contents"=> [
+                                                                  array(
+                                                                   "type"=> "image",
+                                                                   "url"=> "https://www.telzel.com/know/barcode-image.gif",
+                                                                   "align"=> "center",
+                                                                   "gravity"=> "top",
+                                                                   "size"=> "full",
+                                                                   "aspectRatio"=> "20:13"
+                                                                 )
+                                                               ]
+                                                             )
+                                                           ]
+                                                         )
+                                                       ]
+                                                     ),
+                                                     "footer" => array(
+                                                       "type"=> "box",
+                                                       "layout"=> "vertical",
+                                                       "flex"=> 0,
+                                                       "spacing"=>"sm",
+                                                       "contents"=> [
+                                                          array(
+                                                           "type"=> "box",
+                                                           "layout"=> "horizontal",
+                                                           "contents"=> [
+                                                              array(
+                                                               "type"=> "box",
+                                                               "layout"=> "vertical",
+                                                               "contents"=> [
+                                                                  array(
+                                                                   "type"=> "text",
+                                                                   "text"=> "วันออกบัตร",
+                                                                   "size"=> "xs"
+                                                                 ),
+                                                                  array(
+                                                                   "type"=> "text",
+                                                                   "text"=> "25 ก.ค. 2563",
+                                                                   "size"=> "xs"
+                                                                 )
+                                                               ]
+                                                             ),
+                                                              array(
+                                                               "type"=> "box",
+                                                               "layout"=> "vertical",
+                                                               "contents"=> [
+                                                                  array(
+                                                                   "type"=> "text",
+                                                                   "text"=> "วันหมดอายุบัตร",
+                                                                   "size"=> "xs"
+                                                                 ),
+                                                                  array(
+                                                                   "type"=> "text",
+                                                                   "text"=> "25 ก.ค. 2567",
+                                                                   "size"=> "xs"
+                                                                 )
+                                                               ]
+                                                             )
+                                                           ]
+                                                         ),
+                                                          array(
+                                                           "type"=> "spacer",
+                                                           "size"=> "sm"
+                                                         )
+                                                       ]
+                                                     )
+                                                   )
+
+                                          )
+                                       )
                          )
                        ],
                    "payload" => array(

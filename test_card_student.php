@@ -101,7 +101,7 @@ function processMessage($update) {
     "footer"=> array(
       "type"=> "box",
       "layout"=> "vertical",
-      "flex"=> 0,
+//       "flex"=> 0,
       "spacing"=> "sm",
       "contents"=> [
         array(

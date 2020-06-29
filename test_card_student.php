@@ -51,13 +51,13 @@ function processMessage($update) {
                                            ),
                                             array(
                                              "type"=> "text",
-                                             "text"=> "ssssssssssssssssssText",
-                                             "flex"=> 6,
-                                             "margin"=> "md",
-                                             "size"=> "lg",
-                                             "align"=> "center",
-                                             "weight"=> "bold",
-                                             "wrap"=> true
+                                             "text"=> "ssssssssssssssssssText"
+//                                              "flex"=> 6,
+//                                              "margin"=> "md",
+//                                              "size"=> "lg",
+//                                              "align"=> "center",
+//                                              "weight"=> "bold",
+//                                              "wrap"=> true
                                            )
                                          ]
                                        ),

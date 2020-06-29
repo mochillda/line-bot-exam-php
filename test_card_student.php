@@ -46,6 +46,7 @@ function processMessage($update) {
                                            array(
                                              "type"=>"text",
                                              "text"=> "Body",
+                                             "size"=> "xxl",
                                              "align"=> "center"
                                            )
                                          ]

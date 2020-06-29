@@ -19,7 +19,7 @@ function processMessage($update) {
                                      "type"=> "flex",
                                      "altText"=> "Flex Message",
                                      "contents"=> array(
-                                       "type": "bubble",
+                                       "type"=> "bubble",
                                        "direction"=> "ltr",
                                        "header"=> array(
                                          "type"=> "box",

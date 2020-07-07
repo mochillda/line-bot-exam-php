@@ -4,7 +4,7 @@
 function processMessage($update) {
 //     if($update["queryResult"]["queryText"] != "ใช่"){
        if (isset($update["queryResult"]["queryText"])) {
-          if($update["queryResult"]["queryText"] == "card"){
+          if($update["queryResult"]["queryText"] == "บัตร นศ."){
                sendMessage(array(
                    "source" => $update["responseId"],
                    "fulfillmentText"=> 'ข้อความที่จะตอบกลับแบบปกติ',
@@ -14,21 +14,10 @@ function processMessage($update) {
                            "type"=> 4,
                            "payload"=> array(
                                  "line"=> array(
-                                        
-              
-
-  "type"=> "text",
-  "text"=> "Tangmo"
-
-                                        
-       
-                                        
-                                        
-                                        
-                                        
-                                        
-                                               )
-                                            )
+                                 "type"=> "text",
+                                 "text"=> $update
+                            )
+                           )
                          )
                        ],
                    "payload" => array(

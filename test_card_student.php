@@ -15,7 +15,7 @@ function processMessage($update) {
                            "payload"=> array(
                                  "line"=> array(
                                  "type"=> "text",
-                                 "text"=> $update["queryResult"]
+                                 "text"=> "fff"
                             )
                            )
                          )

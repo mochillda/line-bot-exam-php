@@ -15,7 +15,7 @@ function processMessage($update) {
                            "payload"=> array(
                                  "line"=> array(
                                  "type"=> "text",
-                                 "text"=> "test tatataaaaaaa" 
+                                 "text"=> "testttt" 
                             )
                            )
                          )
